@@ -7,5 +7,144 @@
 
     <link rel="stylesheet" href="/CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>HTML Attributes</h1>
+    <p>HTML attributes provide additional information about HTML elements.</p>
+
+    <hr />
+
+    <h2>HTML Attributes</h2>
+    <ul>
+      <li>All HTML elements can have <b>attributes</b>.</li>
+      <li>Attributes provide <b>additional information</b> about elements</li>
+      <li>Attributes are always specified in <b>the start tag</b>.</li>
+      <li>
+        Attributes usually come in name/value pairs like: <b>name="value"</b>
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>The href Attribute</h2>
+    <p>
+      The "a" tag defines a hyperlink. The "href" attribute specifies the URL of
+      the page the link goes to:
+    </p>
+    <p>Example :-</p>
+    <a href="https://www.google.com/">Google</a>
+
+    <hr />
+
+    <h2>The src Attribute</h2>
+    <p>
+      The "img" tag is used to embed an image in an HTML page. The "src"
+      attribute specifies the path to the image to be displayed:
+    </p>
+    <p>Example :-</p>
+    <img
+      src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+      alt="Google Logo"
+      height="100px"
+    />
+
+    <hr />
+
+    <b>There are two ways to specify the URL in the src attribute:</b>
+
+    <p>
+      1. Absolute URL - Links to an external image that is hosted on another
+      website.
+    </p>
+    <p>Example :-</p>
+    <img
+      src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+      alt="Google Logo"
+      height="100px"
+    />
+    <p>
+      2. Relative URL - Links to an image that is hosted within the website.
+    </p>
+    <p>Example :-</p>
+    <img src="./Assets/Google-Logo.png" alt="Google Logo" height="100px" />
+
+    <hr />
+
+    <h2>The width and height Attributes</h2>
+    <p>The "img" tag should also contain the "width" and "height" attributes</p>
+    <p>Example :-</p>
+    <img src="./Assets/Google-Logo.png" alt="Google Logo" height="50px" />
+
+    <hr />
+
+    <h2>The alt Attribute</h2>
+    <p>
+      The required alt attribute for the "img" tag specifies an alternate text
+      for an image, if the image for some reason cannot be displayed.
+    </p>
+    <p>Example :-</p>
+    <img src="./Assets/Gogle-Logo.png" alt="Google Logo" height="50px" />
+
+    <hr />
+
+    <h2>The style Attribute</h2>
+    <p>
+      The "style" attribute is used to add styles to an element, such as color,
+      font, size, and more.
+    </p>
+    <p>Example :-</p>
+    <p style="color: red">This is a red paragraph.</p>
+    <p style="color: blue">This is a blue paragraph.</p>
+
+    <hr />
+
+    <h2 lang="fr">The lang Attribute</h2>
+    <p>
+      You should always include the lang attribute inside the "html" tag, to
+      declare the language of the Web page. This is meant to assist search
+      engines and browsers.
+    </p>
+    <p>Example :-</p>
+    <p lang="fr">Ceci est un paragraphe.</p>
+    <!-- Country codes can also be added to the language code in the lang attribute. So, the first two characters define the language of the HTML page, and the last two characters define the country. -->
+
+    <hr />
+
+    <h2>The title Attribute</h2>
+    <p>The title attribute defines some extra information about an element.</p>
+    <p>
+      The value of the title attribute will be displayed as a tooltip when you
+      mouse over the element:
+    </p>
+    <p>Example :-</p>
+    <p title="I'm a tooltip">This is a paragraph.</p>
+    <p title="Meet Satapara">To know my name hover me!</p>
+
+    <hr />
+
+    <h2>suggestion: Always Use Lowercase Attributes</h2>
+    <p>It is better for code readability.</p>
+
+    <hr />
+
+    <h2>suggestion: Always Quote Attribute Values</h2>
+    <p>The HTML standard does not require quotes around attribute values.</p>
+    <p>
+      Sometimes you have to use quotes. This example will not display the title
+      attribute correctly, because it contains a space:
+    </p>
+    <p title="Description" of W3Schools>Hello world!</p>
+
+    <hr />
+
+    <h2>Single or Double Quotes?</h2>
+    <p>
+      Double quotes around attribute values are the most common in HTML, but
+      single quotes can also be used.
+    </p>
+    <p>
+      In some situations, when the attribute value itself contains double
+      quotes, it is necessary to use single quotes:
+    </p>
+    <p title='John "ShotGun" Nelson'>John with double quotes</p>
+  </body>
 </html>
