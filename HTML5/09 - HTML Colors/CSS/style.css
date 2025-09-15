@@ -1,0 +1,63 @@
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.colors div {
+  padding: 20px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colors .red {
+  background-color: red;
+}
+
+.colors .green {
+  background-color: green;
+}
+
+.colors .blue {
+  background-color: blue;
+}
+
+.colors .gray {
+  background-color: gray;
+}
+
+.rgb-colors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.rgb-colors div {
+  padding: 20px;
+  height: 50px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rgba-colors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.rgba-colors div {
+  padding: 20px;
+  height: 50px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
