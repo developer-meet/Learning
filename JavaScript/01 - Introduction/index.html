@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction : 21/09/2025</title>
+
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <h1>JavaScript Introduction</h1>
+
+    <br />
+
+    <h2>What is JavaScript?</h2>
+    <p>→ JavaScript is the programming language of the web.</p>
+    <p>→ It can calculate, manipulate and validate data.</p>
+    <p>→ It can update and change both HTML and CSS.</p>
+
+    <hr />
+
+    <h2>Why Study JavaScript?</h2>
+    <p>
+      JavaScript is one of the<b> 3 languages </b>all web developers must learn:
+    </p>
+    <ul style="list-style-type: decimal">
+      <li><b>HTML</b> to define the content of web pages</li>
+      <li><b>CSS</b> to specify the layout of web pages</li>
+      <li><b>JavaScript</b> to program the behavior of web pages</li>
+    </ul>
+
+    <hr />
+
+    <h2>JavaScript Can Change HTML Content</h2>
+    <p>One of many JavaScript HTML methods is getElementById().</p>
+    <p>
+      The example below "finds" an HTML element (with id="demo"), and changes
+      the element content (innerHTML) to "Hello JavaScript":
+    </p>
+
+    <hr />
+    <h2>Examples</h2>
+
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button
+      type="button"
+      onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'
+    >
+      Click Me!
+    </button>
+    <p id="name">Know my name click below button</p>
+    <button
+      type="button"
+      onclick="document.getElementById('name').innerHTML = 'Meet Satapara'"
+    >
+      Know my name
+    </button>
+
+    <div>
+      <p id="box">box</p>
+      <button
+        onclick="document.getElementById('box').style.backgroundColor='red'"
+      >
+        red color
+      </button>
+      <button
+        onclick="document.getElementById('box').style.backgroundColor='black'"
+      >
+        black color
+      </button>
+      <button
+        onclick="document.getElementById('box').style.backgroundColor='blue'"
+      >
+        blue color
+      </button>
+    </div>
+
+    <hr />
+
+    <b
+      >JavaScript was invented by Brendan Eich in 1995, and became an ECMA
+      standard in 1997.</b
+    >
+  </body>
+</html>
