@@ -6,6 +6,61 @@
     <title>02 - JS Where to : 23-09-2025</title>
 
     <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="./JS/myScript.js">
+      function myFunction() {
+        document.getElementById("demo2").innerHTML = "Paragraph Changed";
+      }
+      function defaultFunction() {
+        document.getElementById("demo2").innerHTML = "A Paragraph";
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript Where To</h1>
+    <h2>The &lt;script&gt; Tag</h2>
+    <p>
+      In HTML, JavaScript code is inserted between &lt;script&gt; and
+      &lt;/script&gt; tags.
+    </p>
+    <p>Example:</p>
+    <p id="demo"></p>
+    <script>
+      document.getElementById("demo").innerHTML = "My First JavaScript";
+    </script>
+
+    <hr />
+
+    <h2>JavaScript in &lt;head&gt;</h2>
+    <p>
+      In this example, a JavaScript function is placed in the &lt;head&gt;
+      section of an HTML page.
+    </p>
+    <p>Example:</p>
+    <p id="demo2">A Paragraph</p>
+    <button type="button" onclick="myFunction()">Change Para</button>
+    <button type="button" onclick="defaultFunction()">Default para</button>
+
+    <hr />
+
+    <h2>External JavaScript</h2>
+    <p>Scripts can also be placed in external files:</p>
+    <p>Example:</p>
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ea corporis
+      assumenda. Sit blanditiis atque amet saepe similique dolorum nobis nulla
+      sed quam optio! Recusandae reiciendis voluptatem facere eum
+      necessitatibus.
+    </p>
+    <button type="button" onclick="hideTextFunction()">Hide Para</button>
+    <button type="button" onclick="showTextFunction()">Show para</button>
+
+    <hr />
+
+    <h2>External References</h2>
+    <ul>
+      <li>With a full URL (a full web address)</li>
+      <li>With a file path (like /js/)</li>
+      <li>Without any path</li>
+    </ul>
+  </body>
 </html>
