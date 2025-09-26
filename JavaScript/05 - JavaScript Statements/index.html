@@ -7,5 +7,216 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript Statements</h1>
+    <p>
+      A JavaScript <b>program</b> is a list of <b>statements</b> to be executed
+      by a computer.
+    </p>
+    <p>Example:</p>
+    <p id="statement01Example"></p>
+    <script>
+      let x, y, z;
+      x = 10;
+      y = 17;
+      z = x + y;
+
+      document.getElementById("statement01Example").innerHTML =
+        "The value of z is " + z;
+    </script>
+
+    <hr />
+
+    <h2>JavaScript Programs</h2>
+    <p>
+      A computer program is a list of "instructions" to be "executed" by a
+      computer.
+    </p>
+    <p>These programming instructions are called statements.</p>
+    <p>Most JavaScript programs contain many statements.</p>
+    <p>
+      The statements are executed, one by one, in the same order as they are
+      written.
+    </p>
+    <u>In HTML, JavaScript programs are executed by the web browser. </u>
+
+    <hr />
+
+    <h2>JavaScript Statements</h2>
+    <p>JavaScript statements are composed of:</p>
+    <p>Values, Operators, Expressions, Keywords, and Comments.</p>
+    <p>
+      This statement tells the browser to write "Hello World!" inside an HTML
+      element with id="hw":
+    </p>
+    <p>Example:</p>
+    <p id="hw"></p>
+    <script>
+      document.getElementById("hw").innerHTML = "Hello World!";
+    </script>
+    <u
+      >JavaScript programs (and JavaScript statements) are often called
+      JavaScript code.
+    </u>
+
+    <hr />
+
+    <h2>Semicolons ;</h2>
+    <p>Semicolons separate JavaScript statements.</p>
+    <p>Add a semicolon at the end of each executable statement:</p>
+    <p>Examples</p>
+    <p id="semicolon01Example"></p>
+    <script>
+      let a, b, c; // Declare 3 variables
+      a = 5; // Assign the value 5 to a
+      b = 6; // Assign the value 6 to b
+      c = a + b; // Assign the sum of a and b to c
+      document.getElementById("semicolon01Example").innerHTML = c;
+    </script>
+    <p>
+      When separated by semicolons, multiple statements on one line are allowed:
+    </p>
+    <p id="semicolon02Example"></p>
+    <script>
+      let p, q, r;
+      p = 9;
+      q = 6;
+      r = p + q;
+      //   let p, q, r;
+      //   p = 9; q = 6; r = p + q;
+
+      document.getElementById("semicolon02Example").innerHTML = r;
+    </script>
+    <u>On the web, you might see examples without semicolons. </u>
+    <br />
+    <u
+      >Ending statements with semicolon is not required, but highly recommended.
+    </u>
+
+    <hr />
+
+    <h2>JavaScript White Space</h2>
+    <p>
+      JavaScript ignores multiple spaces. You can add white space to your script
+      to make it more readable.
+    </p>
+    <p>The following lines are equivalent(same):</p>
+    <p>
+      let person = "Hege"; <br />
+      let person="Hege";
+    </p>
+    <p>A good practice is to put spaces around operators ( = + - * / ):</p>
+    <p>let x = y + z;</p>
+
+    <hr />
+
+    <h2>JavaScript Line Length and Line Breaks</h2>
+    <p>
+      For best readability, programmers often like to avoid code lines longer
+      than 80 characters.
+    </p>
+    <p>
+      If a JavaScript statement does not fit on one line, the best place to
+      break it is after an operator:
+    </p>
+    <p>Example:</p>
+    <p id="lb"></p>
+    <script>
+      document.getElementById("lb").innerHTML = "Hello world!";
+    </script>
+    <!-- 
+         document.getElementById("lb").innerHTML =
+         "Hello world!";
+    -->
+
+    <hr />
+
+    <h2>JavaScript Code Blocks</h2>
+    <p>
+      JavaScript statements can be grouped together in code blocks, inside curly
+      brackets {...}.
+    </p>
+    <p>
+      The purpose of code blocks is to define statements to be executed
+      together.
+    </p>
+    <p>
+      One place you will find statements grouped together in blocks, is in
+      JavaScript functions:
+    </p>
+    <p>Example:</p>
+    <button type="button" onclick="myFunction()">Click Me!</button>
+    <p id="firstLine"></p>
+    <p id="secondLine"></p>
+    <script>
+      function myFunction() {
+        document.getElementById("firstLine").innerHTML = "Hello everyone!";
+        document.getElementById("secondLine").innerHTML = "How are you?";
+      }
+    </script>
+    <u>In this tutorial we use 2 spaces of indentation for code blocks. </u
+    ><br />
+    <u>You will learn more about functions later in this tutorial.</u>
+
+    <hr />
+
+    <h2>JavaScript Keywords</h2>
+    <p>
+      JavaScript statements often start with a keyword to identify the
+      JavaScript action to be performed.
+    </p>
+    <p>
+      Here is a list of some of the keywords you will learn about in this
+      tutorial:
+    </p>
+    <br />
+
+    <table>
+      <tr>
+        <th>Keyword</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>var</td>
+        <td>Declares a variable</td>
+      </tr>
+      <tr>
+        <td>let</td>
+        <td>Declares a block variable</td>
+      </tr>
+      <tr>
+        <td>const</td>
+        <td>Declares a block constant</td>
+      </tr>
+      <tr>
+        <td>if</td>
+        <td>Marks a block of statements to be executed on a condition</td>
+      </tr>
+      <tr>
+        <td>switch</td>
+        <td>Marks a block of statements to be executed in different cases</td>
+      </tr>
+      <tr>
+        <td>for</td>
+        <td>Marks a block of statements to be executed in a loop</td>
+      </tr>
+      <tr>
+        <td>function</td>
+        <td>Declares a function</td>
+      </tr>
+      <tr>
+        <td>return</td>
+        <td>Exits a function</td>
+      </tr>
+      <tr>
+        <td>try</td>
+        <td>Implements error handling to a block of statements</td>
+      </tr>
+    </table>
+    <br />
+    <u
+      >JavaScript keywords are reserved words. Reserved words cannot be used as
+      names for variables.
+    </u>
+  </body>
 </html>
