@@ -7,5 +7,111 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript Comments</h1>
+    <p>
+      JavaScript comments can be used to explain JavaScript code, and to make it
+      more readable.
+    </p>
+    <p>
+      JavaScript comments can also be used to prevent execution, when testing
+      alternative code.
+    </p>
+
+    <hr />
+
+    <h2>Single Line Comments</h2>
+    <p>
+      Single line comments start with
+      <code class="comment-tx-color-bg-color">//</code>.
+    </p>
+    <p>
+      Any text between <code class="comment-tx-color-bg-color">//</code> and the
+      end of the line will be ignored by JavaScript (will not be executed).
+    </p>
+    <p>Examples:</p>
+    <p id="para1">Hello</p>
+    <script>
+      // Change heading:
+      document.getElementById("para1").innerHTML = "My First Paragraph.";
+    </script>
+    <p>
+      This example uses a single line comment at the end of each line to explain
+      the code:
+    </p>
+    <p id="example-2"></p>
+    <script>
+      let x = 5; // Declare x, give it the value of 5
+      let y = x + 2; // Declare y, give it the value of x + 2
+
+      // Write y to demo:
+      document.getElementById("example-2").innerHTML = y;
+    </script>
+
+    <hr />
+
+    <h2>Multi-line Comments</h2>
+    <p>
+      Multi-line comments start with
+      <code class="comment-tx-color-bg-color">/*</code> and end with
+      <code class="comment-tx-color-bg-color">*/</code>.
+    </p>
+    <p>
+      Any text between <code class="comment-tx-color-bg-color">/*</code> and
+      <code class="comment-tx-color-bg-color">*/</code> will be ignored by
+      JavaScript.
+    </p>
+    <p>
+      This example uses a multi-line comment (a comment block) to explain the
+      code:
+    </p>
+    <p>Example:</p>
+    <p id="para2"></p>
+
+    <script>
+      /*
+            The code below will change
+            the paragraph with id = "para2"
+        */
+
+      document.getElementById("para2").innerHTML = "My Second paragraph.";
+    </script>
+
+    <mark
+      >It is most common to use single line comments. Block comments are often
+      used for formal documentation.
+    </mark>
+
+    <hr />
+
+    <h2>Using Comments to Prevent Execution</h2>
+    <p>
+      Using comments to prevent execution of code is suitable for code testing.
+    </p>
+    <p>
+      Adding <code class="comment-tx-color-bg-color">//</code> in front of a
+      code line changes the code lines from an executable line to a comment.
+    </p>
+    <p>This example uses // to prevent execution of one of the code lines:</p>
+    <p>Example 1:</p>
+    <p id="para3"></p>
+    <script>
+      // document.getElementById("para3").innerHTML = "This ia third page";
+      document.getElementById("para3").innerHTML = "This ia third paragraph.";
+    </script>
+
+    <p>
+      This example uses a comment block to prevent execution of multiple lines:
+    </p>
+    <p>Example 2:</p>
+    <p id="para4"></p>
+    <script>
+      /*
+      document.getElementById("para4").innerHTML = "This ia third page";
+      document.getElementById("para4").innerHTML = "This ia third paragraph.";
+      */
+      document.getElementById("para4").innerHTML =
+        "The comment-block is not executed.";
+    </script>
+  </body>
 </html>
