@@ -7,5 +7,218 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript Variables</h1>
+    <h2>Variables = Data Containers</h2>
+    <p><b>JavaScript variables</b> are containers for data.</p>
+    <p>JavaScript variables can be <b>declared</b> in 4 ways:</p>
+    <h3>Modern JavaScript</h3>
+    <ul>
+      <li>Using <code class="variable-tx-color-bg-color">let</code></li>
+      <li>Using <code class="variable-tx-color-bg-color">const</code></li>
+    </ul>
+    <h3>Older JavaScript</h3>
+    <ul>
+      <li>
+        Using <code class="variable-tx-color-bg-color">var</code> (Not
+        Recommended)
+      </li>
+      <li>Automatically (Not Recommended)</li>
+    </ul>
+    <br />
+    <u>Example using let:</u>
+    <p id="exoflet"></p>
+    <script>
+      let x = 5;
+      let y = 6;
+      let z = x + y;
+
+      document.getElementById("exoflet").innerHTML = "The value of z is " + z;
+    </script>
+
+    <u>Example using const</u>
+    <p id="exofconst"></p>
+    <script>
+      const a = 5;
+      const b = 16;
+      const c = a + b;
+
+      document.getElementById("exofconst").innerHTML = "The value of c is " + c;
+    </script>
+
+    <p>Variables are labels for data values.</p>
+    <p>Variables are containers for storing data.</p>
+
+    <hr />
+    <h2>JavaScript Identifiers</h2>
+    <p>Variables are identified with unique names called identifiers.</p>
+    <p>Names can be short like x, y, z.</p>
+    <p>Names can be descriptive age, sum, carName.</p>
+    <p>The rules for constructing names (identifiers) are:</p>
+    <ul>
+      <li>
+        Names can <b>contain</b> letters, digits, underscores, and dollar signs.
+      </li>
+      <li>
+        Names must <b>begin</b> with a letter, a $ sign or an underscore (_).
+      </li>
+      <li>Names are <b>case sensitive</b> (X is different from x).</li>
+      <li>
+        <b>Reserved words</b> (JavaScript keywords) cannot be used as names.
+      </li>
+    </ul>
+
+    <mark>Numbers are not allowed as the first character in names. </mark>
+
+    <hr />
+
+    <h2>JavaScript Underscore ( _ )</h2>
+    <p>JavaScript treats underscore as a letter.</p>
+    <p>Example:</p>
+    <p id="exofunderscore"></p>
+    <script>
+      let _x = 2;
+      let _y = 5;
+
+      document.getElementById("exofunderscore").innerHTML = _x + _y;
+    </script>
+    <p>
+      A convention among professional programmers is to start a name with
+      underscore for "private" variables.
+    </p>
+
+    <hr />
+
+    <h2>JavaScript Dollar Sign $</h2>
+    <p>JavaScript also treats a dollar sign as a letter.</p>
+    <p>Identifiers containing $ are valid variable names:</p>
+    <p>Example:</p>
+    <p id="exofdollar"></p>
+    <script>
+      let $name = "Meet";
+      document.getElementById("exofdollar").innerHTML = `My name is ${$name}`;
+    </script>
+    <p>
+      Using the $ is not very common in JavaScript, but professional programmers
+      often use it as an alias for the main function in JavaScript libraries.
+    </p>
+
+    <hr />
+
+    <h2>Declaring JavaScript Variables</h2>
+    <p>
+      <b>Creating a variable</b> in JavaScript is called <b>declaring</b> a
+      variable.
+    </p>
+    <p>
+      You declare a JavaScript variable with the
+      <code class="variable-tx-color-bg-color">let</code> keyword or the
+      <code class="variable-tx-color-bg-color">const</code>
+      keyword.
+    </p>
+    <hr />
+    <h2>Declaring a Variable Using let</h2>
+    <p id="carname"></p>
+    <script>
+      let carName;
+      // After the declaration, the variable has no value (technically it is undefined).
+      // To assign a value to the variable, use the equal sign:
+      carName = "Volvo";
+      document.getElementById("carname").innerHTML = carName;
+    </script>
+
+    <hr />
+
+    <h2>Declaring a Variable Using const</h2>
+    <p>
+      Always use <code class="variable-tx-color-bg-color">const</code> if the
+      value should not be changed
+    </p>
+
+    <hr />
+
+    <h2>Declaring a Variable Automatically</h2>
+    <p>
+      Undeclared variables are <b>automatically declared</b> when first used:
+    </p>
+    <p>Example: (<b>Not</b> Recommended)</p>
+    <p id="ex_declaring_auto_variable"></p>
+    <script>
+      p = 5;
+      q = 6;
+      r = p + q;
+
+      document.getElementById("ex_declaring_auto_variable").innerHTML =
+        "The value of r is " + r;
+    </script>
+
+    <mark
+      >It's a good programming practice to declare all variables at the
+      beginning of a script.
+    </mark>
+
+    <hr />
+
+    <h2>Declaring a Variable Using var</h2>
+    <p>
+      The <code class="variable-tx-color-bg-color">var</code> keyword was used
+      in all JavaScript code before 2015.
+    </p>
+    <p>
+      The <code class="variable-tx-color-bg-color">let</code> and
+      <code class="variable-tx-color-bg-color">const</code> keywords were new to
+      JavaScript in 2015.
+    </p>
+    <p>Example: (<b>Not</b> Recommended)</p>
+    <p id="ex_var"></p>
+    <script>
+      var e = 5;
+      var f = 6;
+      var g = e + f;
+
+      document.getElementById("ex_var").innerHTML = "The value of g is " + g;
+    </script>
+
+    <hr />
+
+    <h2>When to Use var, let, or const?</h2>
+    <p>1. Always declare variables</p>
+    <p>
+      2. Always use <code class="variable-tx-color-bg-color">const</code> if the
+      value should not be changed
+    </p>
+    <p>
+      3. Always use <code class="variable-tx-color-bg-color">const</code> if the
+      type should not be changed (Arrays and Objects)
+    </p>
+    <p>
+      4. Only use <code class="variable-tx-color-bg-color">let</code> if you
+      cannot use
+      <code class="variable-tx-color-bg-color">const</code>
+    </p>
+    <p>
+      5. Never use <code class="variable-tx-color-bg-color">var</code> if you
+      can use let or const.
+    </p>
+
+    <hr />
+
+    <h2>One Statement, Many Variables</h2>
+    <p>You can declare many variables in one statement.</p>
+    <p>
+      Start the statement with
+      <code class="variable-tx-color-bg-color">let</code> or
+      <code class="variable-tx-color-bg-color">const</code> and separate the
+      variables by <b>comma</b>:
+    </p>
+    <p>Example:</p>
+    <p id="ex_many_variables"></p>
+
+    <script>
+      let person = "Meet",
+        car_Name = "Volvo";
+
+      document.getElementById("ex_many_variables").innerHTML = car_Name;
+    </script>
+  </body>
 </html>
