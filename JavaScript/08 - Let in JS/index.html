@@ -7,5 +7,195 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript Let</h1>
+    <ul>
+      <li>
+        The <code class="variable-tx-color-bg-color">let</code> keyword was
+        introduced in <u>ES6 (2015)</u>
+      </li>
+      <li>
+        Variables declared with
+        <code class="variable-tx-color-bg-color">let</code> have
+        <b>Block Scope</b>
+      </li>
+      <li>
+        Variables declared with
+        <code class="variable-tx-color-bg-color">let</code> must be
+        <b>Declared</b>
+        before use
+      </li>
+      <li>
+        Variables declared with
+        <code class="variable-tx-color-bg-color">let</code> cannot be
+        <b>Redeclared</b>
+        in the same scope
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Block Scope</h2>
+    <p>
+      ES6 introduced the two new JavaScript keywords:
+      <code class="variable-tx-color-bg-color">let</code> and
+      <code class="variable-tx-color-bg-color">const</code> .
+    </p>
+    <p>These two keywords provided <b>Block Scope</b> in JavaScript:</p>
+    <p>Example:</p>
+    <p>
+      Variables declared inside a { } block cannot be accessed from outside the
+      block
+    </p>
+    <script>
+      {
+        let x = 2;
+      }
+      // x can NOT be used here
+    </script>
+
+    <hr />
+
+    <h2>Global Scope</h2>
+    <p>
+      Variables declared with the
+      <code class="variable-tx-color-bg-color">var</code> always have Global
+      Scope.
+    </p>
+    <p>Example:</p>
+    <p>
+      Variables declared with
+      <code class="variable-tx-color-bg-color">var</code> inside a { } block can
+      be accessed from outside the block:
+    </p>
+    <script>
+      {
+        var x = 2;
+      }
+      // x CAN be used here
+    </script>
+
+    <hr />
+
+    <h2>Cannot be Redeclared</h2>
+    <p>
+      Variables defined with
+      <code class="variable-tx-color-bg-color">let</code> can not be redeclared.
+    </p>
+    <p>
+      You can not accidentally redeclare a variable declared with
+      <code class="variable-tx-color-bg-color">let</code>.
+    </p>
+    <script>
+      // With let you can not do this:
+      //   let a = "John Doe";
+      //   let a = 0;
+      //   console.log(a);
+    </script>
+
+    <p>
+      Variables defined with
+      <code class="variable-tx-color-bg-color">var</code> can be redeclared.
+    </p>
+    <script>
+      // With var you can do this:
+
+      var n = "John Doe";
+      var n = 0;
+      //   console.log(n);
+    </script>
+
+    <hr />
+
+    <h2>Redeclaring Variables</h2>
+    <p>
+      Redeclaring a variable using the
+      <code class="variable-tx-color-bg-color">var</code> keyword can impose
+      problems.
+    </p>
+    <p>
+      Redeclaring a variable inside a block will also redeclare the variable
+      outside the block:
+    </p>
+    <p>Example:</p>
+    <p id="ex01_var"></p>
+    <script>
+      var y = 10;
+      // Here y is 10
+
+      {
+        var y = 2;
+        // Here y is 2
+      }
+
+      // Here y is 2
+      document.getElementById("ex01_var").innerHTML = y;
+    </script>
+
+    <p>
+      Redeclaring a variable using the
+      <code class="variable-tx-color-bg-color">let</code> keyword can solve this
+      problem.
+    </p>
+    <p>
+      Redeclaring a variable inside a block will not redeclare the variable
+      outside the block:
+    </p>
+    <p>Example:</p>
+    <p id="ex01_let"></p>
+
+    <script>
+      let z = 10;
+      // Here z is 10
+
+      {
+        let z = 2;
+        // Here z is 2
+      }
+
+      // Here z is 10
+      document.getElementById("ex01_let").innerHTML = z;
+    </script>
+
+    <hr />
+
+    <h2>Let Hoisting</h2>
+    <p>
+      Variables defined with
+      <code class="variable-tx-color-bg-color">var</code> are <b>hoisted</b> to
+      the top and can be initialized at any time.
+    </p>
+    <p>Meaning: You can use the variable before it is declared:</p>
+    <p>Example:</p>
+    <p id="ex_hoisting"></p>
+
+    <script>
+      carName = "Volvo";
+      document.getElementById("ex_hoisting").innerHTML = carName;
+      var carName;
+    </script>
+
+    <p>
+      Variables defined with
+      <code class="variable-tx-color-bg-color">let</code> are also hoisted to
+      the top of the block, but not initialized.
+    </p>
+    <p>
+      Meaning: Using a
+      <code class="variable-tx-color-bg-color">let</code> variable before it is
+      declared will result in a
+      <code class="variable-tx-color-bg-color">ReferenceError</code> :
+    </p>
+    <p>Example:</p>
+    <p id="ex_let_hoisting"></p>
+
+    <script>
+      try {
+        $carName = "Saab";
+        let $carName = "Volvo";
+      } catch (err) {
+        document.getElementById("ex_let_hoisting").innerHTML = err;
+      }
+    </script>
+  </body>
 </html>
