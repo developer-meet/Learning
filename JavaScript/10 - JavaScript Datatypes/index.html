@@ -7,5 +7,245 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript Datatypes</h1>
+
+    <hr />
+
+    <h2>JavaScript has 8 Datatypes</h2>
+    <p>A JavaScript variable can hold 8 types of data:</p>
+
+    <table class="table_variable">
+      <tbody>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>String</td>
+          <td>A text of characters enclosed in quotes</td>
+        </tr>
+        <tr>
+          <td>Number</td>
+          <td>A number representing a mathematical value</td>
+        </tr>
+        <tr>
+          <td>Bigint</td>
+          <td>A number representing a large integer</td>
+        </tr>
+        <tr>
+          <td>Boolean</td>
+          <td>A data type representing true or false</td>
+        </tr>
+        <tr>
+          <td>Object</td>
+          <td>A collection of key-value pairs of data</td>
+        </tr>
+        <tr>
+          <td>Undefined</td>
+          <td>A primitive variable with no assigned value</td>
+        </tr>
+        <tr>
+          <td>Null</td>
+          <td>A primitive value representing object absence</td>
+        </tr>
+        <tr>
+          <td>Symbol</td>
+          <td>A unique and primitive identifier</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      // String
+      let _Name = "Meet";
+
+      // Number
+      let age = 18;
+
+      // BigInt
+      let price = 1234567890123456789012345n;
+      let _price = BigInt(1234567890123456789012345);
+
+      // Boolean
+      let a = true;
+      let b = false;
+
+      // object
+      const car = {
+        name: "BMW",
+        model: "M4",
+      };
+
+      // Array object
+      const cars = ["Saab", "Volvo", "BMW"];
+
+      // Date object
+      const date = new Date("2022-03-25");
+
+      // Undefined
+      let x;
+      let y;
+
+      // Null
+      let p = null;
+      let q = null;
+
+      // Symbol
+      const m = Symbol();
+      const n = Symbol();
+    </script>
+
+    <hr />
+
+    <h2>The typeof Operator</h2>
+    <p>
+      You can use the JavaScript
+      <code class="highlight_text">typeof</code> operator to find the type of a
+      JavaScript variable.
+    </p>
+    <p>
+      The <code class="highlight_text">typeof</code> operator returns the type
+      of a variable or an expression:
+    </p>
+    <p>Examples:</p>
+    <p id="typeof_str"></p>
+    <p id="typeof_num"></p>
+
+    <script>
+      document.getElementById("typeof_str").innerHTML =
+        "typeof Meet is " +
+        typeof "John" +
+        "<br>" +
+        "typeof Meet Satapara is " +
+        typeof "John Doe";
+
+      // typeof "" = string
+
+      document.getElementById("typeof_num").innerHTML =
+        "typeof 0 = " +
+        typeof 0 +
+        "<br>" +
+        "typeof 314 = " +
+        typeof 314 +
+        "<br>" +
+        "typeof 3.14 = " +
+        typeof 3.14 +
+        "<br>" +
+        "typeof 3 = " +
+        typeof 3 +
+        "<br>" +
+        "typeof (3 + 4) = " +
+        typeof (3 + 4);
+    </script>
+
+    <hr />
+
+    <h2>JavaScript Strings</h2>
+    <p>
+      A string (a text string) is a series of characters like "Hello world!".
+    </p>
+    <p>Strings are written with quotes. You can use single or double quotes.</p>
+    <p>
+      You can use quotes inside a string, as long as they don't match the quotes
+      surrounding the string.
+    </p>
+    <p>Examples:</p>
+    <p id="ex_string"></p>
+
+    <script>
+      let answer1 = "It's alright";
+      let answer2 = "He is called 'Johnny'";
+      let answer3 = 'He is called "Johnny"';
+
+      document.getElementById("ex_string").innerHTML =
+        answer1 + "<br>" + answer2 + "<br>" + answer3;
+    </script>
+
+    <hr />
+
+    <h2>JavaScript Numbers</h2>
+    <p>
+      All JavaScript numbers are stored as decimal numbers (floating point).
+    </p>
+    <p>Numbers can be written with, or without decimals.</p>
+    <p>Examples:</p>
+    <p id="ex_nums"></p>
+    <script>
+      let num1 = 4;
+      let num2 = 7;
+      let num3 = 9.3;
+
+      document.getElementById("ex_nums").innerHTML =
+        num1 + "<br>" + num2 + "<br>" + num3;
+    </script>
+
+    <hr />
+
+    <h2>Exponential Notation</h2>
+    <p>
+      Extra large or extra small numbers can be written with scientific
+      (exponential) notation:
+    </p>
+    <p>Examples:</p>
+    <p id="ex_big_small_num"></p>
+
+    <script>
+      let bignum1 = 123e5;
+      let smallnum1 = 12323e-10;
+
+      document.getElementById("ex_big_small_num").innerHTML =
+        bignum1 + "<br>" + smallnum1;
+    </script>
+
+    <hr />
+
+    <h2>JavaScript Booleans</h2>
+    <p>
+      JavaScript booleans can only have one of two values: <b>true</b> or
+      <b>false</b>
+    </p>
+
+    <hr />
+
+    <h2>Datatype undefined</h2>
+    <p>
+      In computer programs, variables are often declared without a value. The
+      value can be something that has to be calculated, or something that will
+      be provided later, like user input.
+    </p>
+    <p>
+      A variable without a value has the datatype
+      <code class="highlight_text">undefined</code>.
+    </p>
+    <p>
+      A variable without a value also has the value
+      <code class="highlight_text">undefined</code>.
+    </p>
+    <p>Example:</p>
+    <p id="ex_undefined"></p>
+
+    <script>
+      let bikeName;
+      document.getElementById("ex_undefined").innerHTML = typeof bikeName;
+    </script>
+
+    <hr />
+
+    <h2>Empty Values</h2>
+    <p>
+      An empty value has nothing to do with
+      <code class="highlight_text">undefined</code>.
+    </p>
+    <p>An empty string has both a legal value and a type.</p>
+    <p>Example:</p>
+    <p id="ex_empty_value"></p>
+
+    <script>
+      let bike = "";
+
+      document.getElementById("ex_empty_value").innerHTML =
+        "The value is: " + bike + "<br>" + "The type is: " + typeof bike;
+    </script>
+  </body>
 </html>

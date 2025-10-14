@@ -1,3 +1,25 @@
 body {
   font-family: cursive;
 }
+
+.highlight_text {
+  color: crimson;
+  background-color: rgba(222, 222, 222, 0.3);
+  padding: 0 4px;
+}
+
+.table_variable,
+td,
+th {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.table_variable td,
+th {
+  padding: 10px;
+}
+
+.table_variable tr:nth-child(odd) {
+  background-color: #e7e9eb;
+}
