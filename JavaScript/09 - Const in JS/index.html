@@ -7,5 +7,207 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript Const</h1>
+    <p>
+      The <code class="variable">const</code> keyword was introduced in
+      <u>ES6(2015)</u>.
+    </p>
+    <p>
+      Variables defined with <code class="variable">const</code> cannot be
+      <b>Redeclared</b>
+    </p>
+    <p>
+      Variables defined with <code class="variable">const</code> cannot be
+      <b>Reassigned</b>
+    </p>
+    <p>
+      Variables defined with <code class="variable">const</code> have
+      <b>Block Scope</b>
+    </p>
+
+    <hr />
+
+    <h2>Cannot be Reassigned</h2>
+    <p>
+      A variable defined with the <code class="variable">const</code> keyword
+      cannot be reassigned:
+    </p>
+    <p>Example:</p>
+    <p id="ex_const_reassign"></p>
+    <script>
+      try {
+        const PI = 3.141592653589793;
+        PI = 3.14;
+      } catch (err) {
+        document.getElementById("ex_const_reassign").innerHTML = err;
+      }
+    </script>
+
+    <hr />
+
+    <h2>Must be Assigned</h2>
+    <p>
+      JavaScript <code class="variable">const</code> variables must be assigned
+      a value when they are declared:
+    </p>
+    <dl>
+      <dt>Correct:</dt>
+      <dd>const PI = 3.14159265359;</dd>
+      <br />
+      <dt>Incorrect:</dt>
+      <dd>const PI;</dd>
+      <dd>PI = 3.14159265359;</dd>
+    </dl>
+
+    <hr />
+
+    <h2>When to use JavaScript const?</h2>
+    <p>
+      Always declare a variable with <code class="variable">const</code> when
+      you know that the value should not be changed.
+    </p>
+    <p>Use <code class="variable">const</code> when you declare:</p>
+    <ul>
+      <li>A new Array</li>
+      <li>A new Object</li>
+      <li>A new Function</li>
+      <li>A new RegExp</li>
+    </ul>
+
+    <hr />
+
+    <h2>Constant Objects and Arrays</h2>
+    <p>
+      The keyword <code class="variable">const</code> is a little misleading.
+    </p>
+    <p>
+      It does not define a constant value. It defines a constant reference to a
+      value.
+    </p>
+    <p>Because of this you can NOT:</p>
+    <ul>
+      <li>Reassign a constant value</li>
+      <li>Reassign a constant array</li>
+      <li>Reassign a constant object</li>
+      <p>But you CAN:</p>
+      <li>Change the elements of constant array</li>
+      <li>Change the properties of constant object</li>
+    </ul>
+
+    <hr />
+
+    <h2>Constant Arrays</h2>
+    <p>You can change the elements of a constant array:</p>
+    <p>Example:</p>
+    <p id="ex_constant_arr"></p>
+    <p>But you can NOT reassign the array:</p>
+    <p>Example:</p>
+    <p id="ex_constant_arr2"></p>
+
+    <script>
+      const cars = ["Saab", "Volvo", "BMW"];
+      cars[0] = "Toyota";
+      cars.push("Audi");
+
+      document.getElementById("ex_constant_arr").innerHTML = cars;
+
+      try {
+        const cars = ["Saab", "Volvo", "BMW"];
+        cars = ["Toyota", "Volvo", "Audi"];
+      } catch (err) {
+        document.getElementById("ex_constant_arr2").innerHTML = err;
+      }
+    </script>
+
+    <hr />
+
+    <h2>Constant Objects</h2>
+    <p>You can change the properties of a constant object:</p>
+    <p>Example:</p>
+    <p id="ex_constant_obj1"></p>
+    <p>But you can NOT reassign the object:</p>
+    <script>
+      const car = { name: "BMW", model: "M5", color: "white" };
+      car.color = "Black";
+      car.owner = "Meet";
+
+      document.getElementById("ex_constant_obj1").innerHTML =
+        "Car owner is " + car.owner;
+    </script>
+
+    <hr />
+
+    <h2>Block Scope</h2>
+    <p>
+      Declaring a variable with <code class="variable">const</code> is similar
+      to <code class="variable">let</code> when it comes to Block Scope.
+    </p>
+    <p>Example:</p>
+    <p id="ex_of_block_scope"></p>
+
+    <script>
+      const x = 10;
+      {
+        const x = 2;
+      }
+      // Here x is 10
+      document.getElementById("ex_of_block_scope").innerHTML = "x is " + x;
+    </script>
+
+    <hr />
+
+    <h2>Redeclaring</h2>
+    <p>
+      Redeclaring a JavaScript <code class="variable">var</code> variable is
+      allowed anywhere in a program:
+    </p>
+    <p>Example:</p>
+    <p>var x = 2; // Allowed</p>
+    <p>var x = 3; // Allowed</p>
+    <p>x = 4; // Allowed</p>
+
+    <p>
+      Redeclaring an existing <code class="variable">var</code> or
+      <code class="variable">let</code> variable to
+      <code class="variable">const</code>, in the same scope, is not allowed:
+    </p>
+    <p>
+      Reassigning an existing <code class="variable">const</code> variable, in
+      the same scope, is not allowed:
+    </p>
+    <p>
+      Redeclaring a variable with <code class="variable">const</code>, in
+      another scope, or in another block, is allowed:
+    </p>
+
+    <hr />
+
+    <h2>Hoisting</h2>
+    <p>
+      Variables defined with <code class="variable">var</code> are
+      <b>hoisted</b> to the top and can be initialized at any time.
+    </p>
+    <p>Meaning: You can use the variable before it is declared:</p>
+    <p>Example:</p>
+    <p id="ex_of_hoisting1"></p>
+    <p>
+      Using a const variable before it is declared will result in a
+      ReferenceError:
+    </p>
+    <p id="ex_of_hoisting2"></p>
+
+    <script>
+      carName = "Volvo";
+      document.getElementById("ex_of_hoisting1").innerHTML = carName;
+      var carName;
+
+      try {
+        alert(carName);
+        const carName = "Volvo";
+      } catch (err) {
+        document.getElementById("ex_of_hoisting2").innerHTML = err;
+      }
+    </script>
+  </body>
 </html>
