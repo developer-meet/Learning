@@ -7,5 +7,283 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript Arithmetic -->
+    <h1>JavaScript Arithmetic</h1>
+    <hr />
+
+    <!-- Arithmetic Operators -->
+    <h2>JavaScript Arithmetic Operators</h2>
+    <p>
+      Arithmetic operators perform arithmetic on numbers (literals or
+      variables).
+    </p>
+
+    <table class="table_arithmetic_operator">
+      <tbody>
+        <tr>
+          <th>Operator</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>+</td>
+          <td>Addition</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>Subtraction</td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Multiplication</td>
+        </tr>
+        <tr>
+          <td>**</td>
+          <td>Exponentiation (ES2016)</td>
+        </tr>
+        <tr>
+          <td>/</td>
+          <td>Division</td>
+        </tr>
+        <tr>
+          <td>%</td>
+          <td>Modulus (Remainder)</td>
+        </tr>
+        <tr>
+          <td>++</td>
+          <td>Increment</td>
+        </tr>
+        <tr>
+          <td>--</td>
+          <td>Decrement</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <!-- Arithmetic Operations -->
+    <h2>Arithmetic Operations</h2>
+    <p>A typical arithmetic operation operates on two numbers.</p>
+    <p>The two numbers can be literals:</p>
+    <p>Example:</p>
+    <p id="ex_literals"></p>
+    <p>or variables:</p>
+    <p id="ex_variable"></p>
+    <p>or expressions:</p>
+    <p id="ex_expressions"></p>
+    <script>
+      let a = 100 + 50;
+      document.getElementById("ex_literals").innerHTML = a;
+
+      let x = 100;
+      let y = 70;
+      let z = x + y;
+      document.getElementById("ex_variable").innerHTML = z;
+
+      let p = 34;
+      let q = 88;
+      let r = p + q;
+      document.getElementById("ex_expressions").innerHTML = r;
+    </script>
+
+    <hr />
+
+    <!-- Operators and Operands -->
+    <h2>Operators and Operands</h2>
+    <p>The numbers (in an arithmetic operation) are called <b>operands</b>.</p>
+    <p>
+      The operation (to be performed between the two operands) is defined by an
+      <b>operator</b>.
+    </p>
+    <p>a = 100 + 50</p>
+    <p><b>Operand</b> → 100, 50</p>
+    <p><b>Operator</b> → +</p>
+
+    <hr />
+
+    <!-- Adding -->
+    <h2>Adding</h2>
+    <p>
+      The <b>addition</b> operator (<code class="highlight_text">+</code>) adds
+      numbers:
+    </p>
+    <p>Example:</p>
+    <p id="add_num"></p>
+    <script>
+      document.getElementById("add_num").innerHTML = "5 + 7 = " + (5 + 7);
+    </script>
+
+    <hr />
+
+    <!-- Subtracting -->
+    <h2>Subtracting</h2>
+    <p>
+      The <b>subtraction</b> operator (<code class="highlight_text">-</code>)
+      subtracts numbers.
+    </p>
+    <p>Example:</p>
+    <p id="sub_num"></p>
+    <script>
+      document.getElementById("sub_num").innerHTML = "7 - 5 = " + (7 - 5);
+    </script>
+
+    <hr />
+
+    <!-- Multiplying -->
+    <h2>Multiplying</h2>
+    <p>
+      The <b>multiplication</b> operator (<code class="highlight_text">*</code>)
+      multiplies numbers.
+    </p>
+    <p>Example:</p>
+    <p id="multiplication_num"></p>
+    <script>
+      document.getElementById("multiplication_num").innerHTML =
+        "7 * 5 = " + 7 * 5;
+    </script>
+
+    <hr />
+
+    <!-- Dividing -->
+    <h2>Dividing</h2>
+    <p>
+      The <b>division</b> operator (<code class="highlight_text">/</code>)
+      divides numbers.
+    </p>
+    <p>Example:</p>
+    <p id="divition_num"></p>
+    <script>
+      document.getElementById("divition_num").innerHTML = "7 / 5 = " + 7 / 5;
+    </script>
+
+    <hr />
+
+    <!-- Remainder -->
+    <h2>Remainder</h2>
+    <p>
+      The <b>modulus</b> operator (<code class="highlight_text">%</code>)
+      returns the division remainder.
+    </p>
+    <p>Example:</p>
+    <p id="remainder_num"></p>
+
+    <p>
+      In arithmetic, the division of two integers produces a <b>quotient</b> and
+      a <b>remainder</b>.
+    </p>
+    <p>
+      In mathematics, the result of a <b>modulo operation</b> is the
+      <b>remainder</b>
+      of an arithmetic division.
+    </p>
+    <script>
+      document.getElementById("remainder_num").innerHTML = "7 % 5 = " + (7 % 5);
+    </script>
+
+    <hr />
+
+    <!-- Incrementing -->
+    <h2>Incrementing</h2>
+    <p>
+      The <b>increment</b> operator (<code class="highlight_text">++</code>)
+      increments numbers.
+    </p>
+    <p>Example:</p>
+    <p id="ex_increment"></p>
+    <script>
+      let i = 5;
+      i++;
+      let t = i;
+      document.getElementById("ex_increment").innerHTML = t;
+    </script>
+
+    <hr />
+
+    <!-- Decrementing -->
+    <h2>Decrementing</h2>
+    <p>
+      The <b>decrement</b> operator (<code class="highlight_text">--</code>)
+      decrements numbers.
+    </p>
+    <p>Example:</p>
+    <p id="ex_decrement"></p>
+    <script>
+      let j = 5;
+      j--;
+      let k = j;
+      document.getElementById("ex_decrement").innerHTML = k;
+    </script>
+
+    <hr />
+
+    <!-- Exponentiation -->
+    <h2>Exponentiation</h2>
+    <p>
+      The <b>exponentiation</b> operator (<code class="highlight_text">**</code
+      >) raises the first operand to the power of the second operand.
+    </p>
+    <p>Example:</p>
+    <p id="ex1_exponentiation"></p>
+    <p>
+      x ** y produces the same result as (<code class="highlight_text"
+        >Math.pow(x,y)</code
+      >):
+    </p>
+    <p>Example:</p>
+    <p id="ex2_exponentiation"></p>
+    <script>
+      let exponentiation01 = 5;
+      document.getElementById("ex1_exponentiation").innerHTML =
+        exponentiation01 ** 2;
+
+      let exponentiation02 = 5;
+      document.getElementById("ex2_exponentiation").innerHTML = Math.pow(
+        exponentiation02,
+        2
+      );
+    </script>
+
+    <hr />
+
+    <!-- Operator Precedence -->
+    <h2>Operator Precedence</h2>
+    <p>
+      Operator precedence describes the order in which operations are performed
+      in an arithmetic expression.
+    </p>
+    <p>Example: 100 + 50 * 3</p>
+    <p id="ex_Precedence"></p>
+    <ul>
+      <li>
+        Is the result of example above the same as 150 * 3, or is it the same as
+        100 + 150?
+      </li>
+      <li>Is the addition or the multiplication done first?</li>
+      <li>
+        As in traditional school mathematics, the multiplication is done first.
+      </li>
+      <li>
+        Multiplication (<code class="highlight_text">*</code>) and division
+        (<code class="highlight_text">/</code>) have higher
+        <b>precedence</b> than addition (<code class="highlight_text">+</code>)
+        and subtraction (<code class="highlight_text">-</code>).
+      </li>
+      <li>
+        And (as in school mathematics) the precedence can be changed by using
+        parentheses.
+      </li>
+      <li>
+        When using parentheses, the operations inside the parentheses are
+        computed first:
+      </li>
+    </ul>
+    <p>Example: (100 + 50) * 3;</p>
+    <p id="ex_Precedence02"></p>
+    <script>
+      document.getElementById("ex_Precedence").innerHTML = 100 + 50 * 3;
+
+      document.getElementById("ex_Precedence02").innerHTML = (100 + 50) * 3;
+    </script>
+  </body>
 </html>
