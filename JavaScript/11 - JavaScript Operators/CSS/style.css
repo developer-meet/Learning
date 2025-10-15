@@ -1,3 +1,32 @@
 body {
   font-family: cursive;
 }
+
+.highlight_text {
+  color: crimson;
+  background-color: rgba(222, 222, 222, 0.3);
+  padding: 0 4px;
+}
+
+.table_arithmetic_operator {
+  width: 50%;
+}
+
+.table_arithmetic_operator th {
+  text-align: left;
+}
+
+.table_arithmetic_operator,
+tr {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+.table_arithmetic_operator td,
+th {
+  padding: 10px;
+}
+
+.table_arithmetic_operator tr:nth-child(odd) {
+  background-color: #e7e9eb;
+}

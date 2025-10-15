@@ -7,5 +7,259 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript Operators -->
+    <h1>JavaScript Operators</h1>
+    <p>Operators are for Mathematical and Logical Computations</p>
+    <ul>
+      <li>The <b>Assignment Operator</b> = assigns values</li>
+      <li>The <b>Addition Operator</b> + adds values</li>
+      <li>The <b>Multiplication Operator</b> * multiplies values</li>
+      <li>The <b>Comparison Operator</b> > compares values</li>
+    </ul>
+
+    <hr />
+
+    <!-- JavaScript Assignment -->
+    <h2>JavaScript Assignment</h2>
+    <p>
+      The <b>Assignment Operator</b> (<code class="highlight_text">=</code>)
+      assigns a value to a variable:
+    </p>
+    <p>Example:</p>
+    <p id="ex_assignment_operator"></p>
+    <script>
+      // Assign the value "Meet" to myName
+      let myName = "Meet";
+      document.getElementById("ex_assignment_operator").innerHTML = myName;
+    </script>
+
+    <hr />
+
+    <!-- JavaScript Addition -->
+    <h2>JavaScript Addition</h2>
+    <p>
+      The <b>Addition Operator</b> (<code class="highlight_text">+</code>) adds
+      numbers:
+    </p>
+    <p>Example:</p>
+    <p id="ex_addition_operator"></p>
+    <script>
+      let x = 5;
+      let y = 2;
+      let z = x + y;
+      document.getElementById("ex_addition_operator").innerHTML = z;
+    </script>
+
+    <!-- JavaScript Multiplication -->
+    <h2>JavaScript Multiplication</h2>
+    <p>
+      The <b>Multiplication Operator</b> (<code class="highlight_text">*</code>)
+      multiplies numbers:
+    </p>
+    <p>Example:</p>
+    <p id="ex_Multiplication_operator"></p>
+    <script>
+      let p = 5;
+      let q = 2;
+      let r = p * q;
+      document.getElementById("ex_Multiplication_operator").innerHTML = r;
+    </script>
+
+    <hr />
+
+    <h2>Types of JavaScript Operators</h2>
+    <p>There are different types of JavaScript operators:</p>
+    <ul>
+      <li>Arithmetic Operators</li>
+      <li>Assignment Operators</li>
+      <li>Comparison Operators</li>
+      <li>Logical Operators</li>
+      <li>And more ...</li>
+    </ul>
+
+    <hr />
+
+    <h2>JavaScript Arithmetic Operators</h2>
+    <p>
+      <b>Arithmetic Operators</b> are used to perform arithmetic on numbers:
+    </p>
+    <p>Example:</p>
+    <p>
+      A typical arithmetic operation takes two numbers (or expressions) and
+      produces a new number.
+    </p>
+    <p id="ex_arithmetic_operator"></p>
+    <table class="table_arithmetic_operator">
+      <tbody>
+        <tr>
+          <th>Operator</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>+</td>
+          <td>Addition</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>Subtraction</td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>Multiplication</td>
+        </tr>
+        <tr>
+          <td>**</td>
+          <td>Exponentiation</td>
+        </tr>
+        <tr>
+          <td>/</td>
+          <td>Division</td>
+        </tr>
+        <tr>
+          <td>%</td>
+          <td>Modulus (Division Remainder)</td>
+        </tr>
+        <tr>
+          <td>++</td>
+          <td>Increment</td>
+        </tr>
+        <tr>
+          <td>--</td>
+          <td>Decrement</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Arithmetic operators are fully described in the
+      <b>JS Arithmetic</b> chapter.
+    </p>
+    <script>
+      let a = 3;
+      let b = (100 + 50) * a;
+      document.getElementById("ex_arithmetic_operator").innerHTML = b;
+    </script>
+
+    <hr />
+
+    <h2>JavaScript String Addition</h2>
+    <p>
+      The <code class="highlight_text">+</code> can also be used to add
+      (concatenate) strings:
+    </p>
+    <p>Example:</p>
+    <p id="ex1_addition_String"></p>
+    <p>
+      The <code class="highlight_text">+=</code> assignment operator can also be
+      used to add (concatenate) strings:
+    </p>
+    <p>Example:</p>
+    <p id="ex2_addition_String"></p>
+    <script>
+      let text1 = "Meet";
+      let text2 = "Satapara";
+      let text3 = text1 + " " + text2;
+      let text4 = "What a very ";
+      text4 += "nice day";
+      document.getElementById("ex1_addition_String").innerHTML = text3;
+      document.getElementById("ex2_addition_String").innerHTML = text4;
+    </script>
+    <mark
+      >When used on strings, the + operator is called the concatenation
+      operator.
+    </mark>
+
+    <hr />
+
+    <h2>Adding Strings and Numbers</h2>
+    <p>Adding two numbers, will return the sum as a number like 5 + 5 = 10.</p>
+    <p>
+      Adding a number and a string, will return the sum as a concatenated string
+      like 5 + "5" = "55".
+    </p>
+    <p>Example:</p>
+    <p id="ex_add_str_num"></p>
+    <mark>If you add a number and a string, the result will be a string! </mark>
+    <script>
+      let m = 5 + 5;
+      let o = "5" + 5;
+      let n = "Hello" + 5;
+      document.getElementById("ex_add_str_num").innerHTML =
+        m + "<br>" + o + "<br>" + n;
+    </script>
+
+    <hr />
+
+    <h2>JavaScript Assignment Operators</h2>
+    <p>Assignment operators assign values to JavaScript variables.</p>
+    <p>
+      The <b>Addition Assignment Operator</b> (<code class="highlight_text"
+        >+=</code
+      >) adds a value to a variable.
+    </p>
+    <p>Example:</p>
+    <p id="ex2_asignment_operator"></p>
+    <p>Assignment Operators</p>
+    <ul>
+      <li>=</li>
+      <li>+=</li>
+      <li>-=</li>
+      <li>*=</li>
+      <li>/=</li>
+      <li>%=</li>
+      <li>**=</li>
+    </ul>
+    <script>
+      var s = 10;
+      s += 5;
+      document.getElementById("ex2_asignment_operator").innerHTML = s;
+    </script>
+
+    <hr />
+
+    <h2>JavaScript Comparison Operators</h2>
+    <p>Comparison operators are used to <b>compare two values</b>.</p>
+    <p>
+      Comparison operators always return
+      <code class="highlight_text">true</code> or
+      <code class="highlight_text">false</code>.
+    </p>
+    <p>Example:</p>
+    <p>Assign 5 to t, and display the value of the comparison (t > 8).</p>
+    <p id="ex_comparison_operator"></p>
+    <p>Comparison Operators</p>
+    <ul>
+      <li>==</li>
+      <li>===</li>
+      <li>!=</li>
+      <li>!==</li>
+      <li>&gt;</li>
+      <li>&lt;</li>
+      <li>&gt;=</li>
+      <li>&lt;=</li>
+    </ul>
+    <p>All the comparison operators above can also be used on strings:</p>
+    <p id="ex2_comparison_operator"></p>
+    <p>Note that strings are compared alphabetically.</p>
+    <script>
+      let t = 5;
+      document.getElementById("ex_comparison_operator").innerHTML = t > 8;
+
+      let s1 = "A";
+      let s2 = "B";
+      let result = s1 < s2;
+      document.getElementById("ex2_comparison_operator").innerHTML =
+        "Is A less than B? " + result;
+    </script>
+
+    <hr />
+
+    <h2>JavaScript Logical Operators</h2>
+    <p>Logical Operators</p>
+    <ul>
+      <li>&& → logical and</li>
+      <li>|| → logical or</li>
+      <li>! → logical not</li>
+    </ul>
+  </body>
 </html>
