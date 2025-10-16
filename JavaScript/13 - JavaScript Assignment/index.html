@@ -7,5 +7,333 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript Assignment -->
+    <h1>JavaScript Assignment</h1>
+
+    <hr />
+
+    <!-- JavaScript Assignment Operators -->
+    <h2>JavaScript Assignment Operators</h2>
+    <p>Assignment operators assign values to JavaScript variables.</p>
+    <p>
+      Given that <b>x = 10</b> and <b>y = 5</b>, the table below explains the
+      assignment operators:
+    </p>
+    <table class="table_assignment_operators">
+      <tbody>
+        <tr>
+          <th>Operator</th>
+          <th>Example</th>
+          <th>Same As</th>
+          <th>Result</th>
+        </tr>
+        <tr>
+          <td>=</td>
+          <td>x = y</td>
+          <td>x = y</td>
+          <td>x = 5</td>
+        </tr>
+        <tr>
+          <td>+=</td>
+          <td>x += y</td>
+          <td>x = x + y</td>
+          <td>x = 15</td>
+        </tr>
+        <tr>
+          <td>-=</td>
+          <td>x -= y</td>
+          <td>x = x - y</td>
+          <td>x = 5</td>
+        </tr>
+        <tr>
+          <td>*=</td>
+          <td>x *= y</td>
+          <td>x = x * y</td>
+          <td>x = 50</td>
+        </tr>
+        <tr>
+          <td>**=</td>
+          <td>x **= y</td>
+          <td>x = x ** y</td>
+          <td>x = 100000</td>
+        </tr>
+        <tr>
+          <td>/=</td>
+          <td>x /= y</td>
+          <td>x = x / y</td>
+          <td>x = 2</td>
+        </tr>
+        <tr>
+          <td>%=</td>
+          <td>x %= y</td>
+          <td>x = x % y</td>
+          <td>x = 0</td>
+        </tr>
+        <tr>
+          <td>:</td>
+          <td>x: 45</td>
+          <td>size.x = 45</td>
+          <td>x = 45</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Logical Assignment Operators -->
+    <h2>Logical Assignment Operators</h2>
+    <table class="table_logical_assignment_operators">
+      <tbody>
+        <tr>
+          <th>Operator</th>
+          <th>Example</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <td>&amp;&amp;=</td>
+          <td>true &amp;&amp;= 10</td>
+          <td>x = 10</td>
+        </tr>
+        <tr>
+          <td>||=</td>
+          <td>false ||= 10</td>
+          <td>x = 10</td>
+        </tr>
+        <tr>
+          <td>??=</td>
+          <td>null ??= 10</td>
+          <td>x = 10</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <!-- The = Operator -->
+    <h2>The = Operator</h2>
+    <p>
+      The <b>Simple Assignment Operator</b> assigns a simple value to a
+      variable.
+    </p>
+    <p>Example:</p>
+    <p id="ex_simple_assignment_operator"></p>
+    <script>
+      let a = 10;
+      document.getElementById("ex_simple_assignment_operator").innerHTML =
+        "Value of a is: " + a;
+    </script>
+
+    <hr />
+
+    <!-- The += Operator -->
+    <h2>The += Operator</h2>
+    <p>The <b>Addition Assignment Operator</b> adds a value to a variable.</p>
+    <p>Example:</p>
+    <p id="ex_addition_assignment_operator"></p>
+    <script>
+      let b = 10;
+      b += 5;
+      document.getElementById("ex_addition_assignment_operator").innerHTML =
+        "Value of b is: " + b;
+    </script>
+
+    <hr />
+
+    <!-- The -= Operator -->
+    <h2>The -= Operator</h2>
+    <p>
+      The <b>Subtraction Assignment Operator</b> subtracts a value from a
+      variable.
+    </p>
+    <p>Example:</p>
+    <p id="ex_subtraction_assignment_operator"></p>
+    <script>
+      let c = 10;
+      c -= 5;
+      document.getElementById("ex_subtraction_assignment_operator").innerHTML =
+        "Value of c is: " + c;
+    </script>
+
+    <hr />
+
+    <!-- The *= Operator -->
+    <h2>The *= Operator</h2>
+    <p>The <b>Multiplication Assignment Operator</b> multiplies a variable.</p>
+    <p>Example:</p>
+    <p id="ex_multiplication_assignment_operator"></p>
+    <script>
+      let d = 10;
+      d *= 5;
+      document.getElementById(
+        "ex_multiplication_assignment_operator"
+      ).innerHTML = "Value of d is: " + d;
+    </script>
+
+    <hr />
+
+    <!-- The **= Operator -->
+    <h2>The **= Operator</h2>
+    <p>
+      The <b>Exponentiation Assignment Operator</b> raises a variable to the
+      power of the operand.
+    </p>
+    <p>Example:</p>
+    <p id="ex_exponentiation_assignment_operator"></p>
+    <script>
+      let e = 10;
+      e **= 5;
+      document.getElementById(
+        "ex_exponentiation_assignment_operator"
+      ).innerHTML = "Value of e is: " + e;
+    </script>
+
+    <hr />
+
+    <!-- The /= Operator -->
+    <h2>The /= Operator</h2>
+    <p>The <b>Division Assignment Operator</b> divides a variable.</p>
+    <p>Example:</p>
+    <p id="ex_division_assignment_operator"></p>
+    <script>
+      let f = 10;
+      f /= 5;
+      document.getElementById("ex_division_assignment_operator").innerHTML =
+        "Value of f is: " + f;
+    </script>
+
+    <hr />
+
+    <!-- The %= Operator -->
+    <h2>The %= Operator</h2>
+    <p>
+      The <b>Remainder Assignment Operator</b> assigns a remainder to a
+      variable.
+    </p>
+    <p>Example:</p>
+    <p id="ex_remainder_assignment_operator"></p>
+    <script>
+      let g = 10;
+      g %= 5;
+      document.getElementById("ex_remainder_assignment_operator").innerHTML =
+        "Value of g is: " + g;
+    </script>
+
+    <hr />
+
+    <!-- String Assignment -->
+    <h2>String Assignment</h2>
+    <p>Two assignment operators can assign values to strings:</p>
+    <p>
+      The <b>Simple Assignment Operator</b> assigns a simple value to a string.
+    </p>
+    <p>The <b>Addition Assignment Operator</b> adds a value to a string.</p>
+
+    <hr />
+
+    <!-- The = Operator (String) -->
+    <h2>The = Operator</h2>
+    <p>The <b>Simple Assignment Operator</b> assigns a value to a variable.</p>
+    <p>Example:</p>
+    <p id="ex_string_assignment"></p>
+    <script>
+      let h = "Hello";
+      document.getElementById("ex_string_assignment").innerHTML =
+        "The value of h is: " + h;
+    </script>
+
+    <hr />
+
+    <!-- The += Operator (String) -->
+    <h2>The += Operator</h2>
+    <p>
+      The <b>Addition Assignment Operator</b> Can also be used to add strings.
+    </p>
+    <p>Example:</p>
+    <p id="ex_string_addition_assignment"></p>
+    <script>
+      let text1 = "Hello";
+      text1 += " World";
+      document.getElementById("ex_string_addition_assignment").innerHTML =
+        text1;
+    </script>
+
+    <hr />
+
+    <!-- The &&= Operator -->
+    <h2>The &&= Operator</h2>
+    <p>The Logical AND assignment operator is used between two values.</p>
+    <p>Example:</p>
+    <p id="ex_logical_and_Operator"></p>
+    <script>
+      let i = true;
+      //   let i = false;
+      //   let i = 1;
+      //   let i = 0;
+      //   let i = undefined;
+      //   let i = null;
+      let j = (i &&= 10);
+      document.getElementById("ex_logical_and_Operator").innerHTML =
+        "Value of j is: " + j;
+    </script>
+
+    <hr />
+
+    <!-- The ||= Operator -->
+    <h2>The ||= Operator</h2>
+    <p>The <b>Logical OR assignment operator</b> is used between two values.</p>
+    <p>If the first value is false, the second value is assigned.</p>
+    <p>Example:</p>
+    <p id="ex_logical_or_Operator"></p>
+    <script>
+      //   let k = false;
+      //   let k = true;
+      //   let k = undefined;
+      let k = null;
+      let l = (k ||= 10);
+
+      document.getElementById("ex_logical_or_Operator").innerHTML =
+        "Value of l is: " + l;
+    </script>
+
+    <hr />
+
+    <!-- The ??= Operator -->
+    <h2>The ??= Operator</h2>
+    <p>
+      The <b>Nullish coalescing assignment operator</b> is used between two
+      values.
+    </p>
+    <p>
+      If the first value is undefined or null, the second value is assigned.
+    </p>
+    <p>Example:</p>
+    <p id="ex_nullish_coalescing_operator"></p>
+    <script>
+      //   let m;
+      //   let m = 0;
+      //   let m = null;
+      //   let m = undefined;
+      let m = 11;
+      m ??= 10;
+
+      document.getElementById("ex_nullish_coalescing_operator").innerHTML =
+        "m is: " + m;
+    </script>
+
+    <hr />
+
+    <!-- The Spread (...) Operator -->
+    <h2>The Spread (...) Operator</h2>
+    <p>The ... operator splits iterables into individual elements.</p>
+    <p>Example:</p>
+    <p id="ex_spread_operator"></p>
+    <script>
+      let text2 = "12345";
+      let min = Math.min(...text2);
+      let max = Math.max(...text2);
+
+      document.getElementById("ex_spread_operator").innerHTML =
+        "Minimum is: " + min + "<br>Maximum is: " + max;
+    </script>
+  </body>
 </html>
