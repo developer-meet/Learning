@@ -7,5 +7,82 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript if -->
+    <h1>JavaScript if</h1>
+    <h2>The JavaScript if Statement</h2>
+    <p>
+      Use the JavaScript if statement to execute a block of code
+      <b>when a condition is true.</b>
+    </p>
+    <h3>Syntax</h3>
+    <pre>
+        if (condition) {
+            //  block of code to be executed if the condition is true
+        }
+    </pre>
+    <mark
+      >Note that if is in lowercase letters. Uppercase letters (If or IF) will
+      generate a JavaScript error.
+    </mark>
+
+    <h3>Examples:</h3>
+
+    <p>Example 1:</p>
+    <p>Display "Good day!" if the hour is less than 18:00:</p>
+    <p id="ex1_if">Good Evening!</p>
+
+    <p>Example 2:</p>
+    <p id="ex2_if"></p>
+
+    <script>
+      if (new Date().getHours() < 18) {
+        document.getElementById("ex1_if").innerHTML = "Good day!";
+      }
+
+      let age = 18;
+      let text = "You can Not drive.";
+
+      if (age >= 18) {
+        text = "You can drive.";
+      }
+      document.getElementById("ex2_if").innerHTML = text;
+    </script>
+
+    <hr />
+
+    <!-- Nested if -->
+    <h2>Nested if</h2>
+    <p>
+      You can use an <code class="highlight_text">if</code> statement inside
+      another <code class="highlight_text">if</code> statement:
+    </p>
+    <p>Example:</p>
+    <p id="ex1_nested_if"></p>
+    <p>Nested if statements can make your code more complex.</p>
+    <p>A better solution is to use the logical AND operator:</p>
+    <p id="ex2_nested_if"></p>
+
+    <script>
+      let your_age = 16;
+      let country = "USA";
+      let another_text = "You can Not drive!";
+
+      if (country == "USA") {
+        if (your_age >= 16) {
+          another_text = "You can drive!";
+        }
+      }
+      document.getElementById("ex1_nested_if").innerHTML = another_text;
+
+      let yourAge = 16;
+      let your_country = "USA";
+      let another_Text = "You can Not drive!";
+
+      if (your_country == "USA" && yourAge >= 16) {
+        another_Text = "You can drive!";
+      }
+      document.getElementById("ex2_nested_if").innerHTML = another_Text;
+    </script>
+  </body>
 </html>
