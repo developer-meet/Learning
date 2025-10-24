@@ -7,5 +7,139 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript Conditionals -->
+    <h1>JavaScript Conditionals</h1>
+    <p>
+      When you write code, you often want to perform
+      <b>different actions</b> for <b>different conditions</b>.
+    </p>
+    <p>
+      Conditional statements <b>run different code</b> depending on a
+      <b>true</b> or <b>false</b> condition.
+    </p>
+    <p><b>Conditional statements</b>include:</p>
+    <ul>
+      <li>if</li>
+      <li>if...else</li>
+      <li>if...else if...else</li>
+      <li>switch</li>
+      <li>ternary (? :)</li>
+    </ul>
+
+    <!-- When to use Conditionals -->
+    <h2>When to use Conditionals</h2>
+    <ul>
+      <li>
+        Use <code class="highlight_text">if</code> to specify a
+        <b>code block</b> to be executed, if a specified condition is
+        <code class="highlight_text">true</code>
+      </li>
+      <li>
+        Use <code class="highlight_text">else</code> to specify a
+        <b>code block</b> to be executed, if the same condition is
+        <code class="highlight_text">false</code>
+      </li>
+      <li>
+        Use <code class="highlight_text">else if</code> to specify a
+        <b>new condition</b> to test, if the first condition is false
+      </li>
+      <li>
+        Use <code class="highlight_text">switch</code> to specify many
+        <b>alternative code blocks</b> to be executed
+      </li>
+      <li>
+        Use <code class="highlight_text">(? :)</code> (ternary) as a
+        <b>shorthand</b> for if...else
+      </li>
+    </ul>
+
+    <hr />
+
+    <!-- The if Statement -->
+    <h2>The if Statement</h2>
+    <p>
+      Use <code class="highlight_text">if</code> to specify a
+      <b>code block</b> to be executed, if a specified condition is
+      <code class="highlight_text">true</code>
+    </p>
+    <h3>Syntax</h3>
+    <pre>
+      if (condition) {
+        // code to execute if the condition is true
+      }
+    </pre>
+
+    <hr />
+
+    <!-- The else Statement -->
+    <h2>The else Statement</h2>
+    <p>
+      Use <code class="highlight_text">else</code> to specify a
+      <b>code block</b> to be executed, if the same condition is
+      <code class="highlight_text">false</code>
+    </p>
+    <h3>Syntax</h3>
+    <pre>
+      if (condition) {
+        // code to execute if the condition is true
+      } else {
+        // code to execute if the condition is false
+      }
+    </pre>
+
+    <hr />
+
+    <!-- The else if Statement -->
+    <h2>The else if Statement</h2>
+    <p>
+      Use <code class="highlight_text">else if</code> to specify a
+      <b>new condition</b> to test, if the first condition is false
+    </p>
+    <p>Syntax</p>
+    <pre>
+      if (condition1) {
+        // code to execute if condition1 is true
+      } else if (condition2) {
+        // code to execute if the condition1 is false and condition2 is true
+      } else {
+        // code to execute if the condition1 is false and condition2 is false
+      }
+    </pre>
+
+    <hr />
+
+    <!-- The switch Statement -->
+    <h2>The switch Statement</h2>
+    <p>
+      Use <code class="highlight_text">switch</code> to specify many
+      <b>alternative code blocks</b> to be executed
+    </p>
+    <p>Syntax</p>
+    <pre>
+      switch(expression) {
+        case x:
+          // code block
+          break;
+        case y:
+          // code block
+          break;
+        default:
+          // code block
+      }       
+    </pre>
+
+    <hr />
+
+    <!-- Ternary Operator (? :) -->
+    <h2>Ternary Operator (? :)</h2>
+    <p>
+      Use <code class="highlight_text">(? :)</code> (ternary) as a
+      <b>shorthand</b> for <code class="highlight_text">if...else </code>.
+    </p>
+    <p>Example</p>
+    <pre>
+        condition ? expression1 : expression2
+    </pre>
+  </body>
 </html>
