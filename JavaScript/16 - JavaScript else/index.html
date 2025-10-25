@@ -7,5 +7,69 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript else -->
+    <h1>JavaScript else</h1>
+
+    <h2>The else Statement</h2>
+    <p>
+      Use the <code class="highlight_text">else</code> statement to specify a
+      <b>block of code</b> to be executed if a <b>condition</b> is
+      <code class="highlight_text">false</code>.
+    </p>
+    <p>Syntax:</p>
+    <pre>
+        if (condition) {
+            //  block of code to be executed if the condition is true
+        } else {
+            //  block of code to be executed if the condition is false
+        }
+    </pre>
+    <p>Example:</p>
+    <p id="ex1_else"></p>
+    <script>
+      let a = 40;
+      let result;
+      if (a >= 35) {
+        result = "You passed in the exam.";
+      } else {
+        result = "You failed in the exam.";
+      }
+      document.getElementById("ex1_else").innerHTML = result;
+    </script>
+
+    <hr />
+
+    <!-- The else if Statement -->
+    <h2>The else if Statement</h2>
+    <p>
+      Use the <code class="highlight_text">else if</code> statement to specify a
+      <b>new condition</b> if the first is
+      <code class="highlight_text">false</code>.
+    </p>
+    <p>Syntax:</p>
+    <pre>
+        if (condition1) {
+            //  block of code to be executed if condition1 is true
+        } else if (condition2) {
+            //  block of code to be executed if the condition1 is false and condition2 is true
+        } else {
+            //  block of code to be executed if the condition1 is false and condition2 is false
+        }
+    </pre>
+    <p>Example:</p>
+    <p id="ex1_else_if"></p>
+    <script>
+      let num = 11;
+      let ans;
+      if (num > 10) {
+        ans = "Greater than 10";
+      } else if (num === 10) {
+        ans = "Equal to 10";
+      } else {
+        ans = "Less than 10";
+      }
+      document.getElementById("ex1_else_if").innerHTML = ans;
+    </script>
+  </body>
 </html>
