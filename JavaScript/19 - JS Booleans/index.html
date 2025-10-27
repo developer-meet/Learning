@@ -7,5 +7,251 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript Booleans -->
+    <h1>JavaScript Booleans</h1>
+    <h2>The Boolean Data Type</h2>
+    <p>
+      In JavaScript, a Boolean is a primitive data type that can only have one
+      of two values:
+    </p>
+    <p><b>true</b> or <b>false</b></p>
+    <p>
+      The Boolean value of an expression is the basis for all JavaScript
+      <b>comparisons</b> and <b>conditions</b>.
+    </p>
+
+    <!-- Key Boolean Characteristics -->
+    <h2>Key Boolean Characteristics</h2>
+    <ul>
+      <li>true and false are <b>boolean data types</b></li>
+      <li><b>true and false</b> are the only possible boolean values</li>
+      <li>true and false must be written in <b>lowercase</b></li>
+      <li>true and false must be written <b>without quotes</b></li>
+    </ul>
+
+    <hr />
+
+    <!-- Boolean Use Cases -->
+    <h2>Boolean Use Cases</h2>
+    <p>
+      Very often, in programming, you will need a data type that can represent
+      one of two values, like:
+    </p>
+    <ul>
+      <li>yes or no</li>
+      <li>on or off</li>
+      <li>true or false</li>
+    </ul>
+    <p>
+      Boolean values are fundamental for logical operations and control flow in
+      JavaScript programming.
+    </p>
+
+    <hr />
+
+    <!-- Comparisons -->
+    <h2>Comparisons</h2>
+    <p>
+      All JavaScript comparison operators (like ==, !=, &lt;, >) return
+      <b>true</b> or <b>false</b> from the comparison.
+    </p>
+    <p>Example:</p>
+    <p>x = 5</p>
+    <p id="ex1_comparisons"></p>
+    <p id="ex2_comparisons"></p>
+    <p id="ex3_comparisons"></p>
+    <p id="ex4_comparisons"></p>
+
+    <script>
+      let x = 5;
+      document.getElementById("ex1_comparisons").innerHTML = `x == 8 → ${
+        x == 8
+      } `;
+      document.getElementById("ex2_comparisons").innerHTML = `x != 8 → ${
+        x != 8
+      }`;
+      document.getElementById("ex3_comparisons").innerHTML = `x > 8 → ${x > 8}`;
+      document.getElementById("ex4_comparisons").innerHTML = `x < 8 → ${x < 8}`;
+    </script>
+
+    <hr />
+
+    <!-- Conditions -->
+    <h2>Conditions</h2>
+    <p>
+      Booleans are extensively used in <b>if statements</b> to determine the
+      code blocks to execute based on the logic.
+    </p>
+    <p>Example:</p>
+    <p id="ex1_conditions"></p>
+    <p id="ex2_conditions"></p>
+    <script>
+      let age = 18;
+      let text;
+      if (age < 18) {
+        text = "You can not drive.";
+      } else {
+        text = "You can drive.";
+      }
+      let your_age = 18;
+      let another_text;
+      if (age < 18) {
+        another_text = "You can not vote.";
+      } else {
+        another_text = "You can vote.";
+      }
+      document.getElementById("ex1_conditions").innerHTML = `${text}`;
+      document.getElementById("ex2_conditions").innerHTML = `${another_text}`;
+    </script>
+
+    <hr />
+
+    <!-- Loops -->
+    <h2>Loops</h2>
+    <p>
+      Booleans are extensively used in loops to determine conditions for
+      looping.
+    </p>
+    <p>Example:</p>
+
+    <p id="ex1_Loops"></p>
+
+    <script>
+      let text_loop = "";
+      let i = 1;
+
+      while (i <= 10) {
+        text_loop += i + "<br>";
+        i++;
+      }
+
+      document.getElementById("ex1_Loops").innerHTML = `${text_loop}`;
+    </script>
+
+    <hr />
+
+    <!-- The Boolean() Function -->
+    <h2>The Boolean() Function</h2>
+    <p>
+      You can use the <code class="highlight_text">Boolean()</code>
+      function to find out if an expression (or a variable) is true:
+    </p>
+    <p>Example:</p>
+    <p id="ex1_boolean_func"></p>
+    <p id="ex2_boolean_func"></p>
+    <script>
+      document.getElementById("ex1_boolean_func").innerHTML =
+        "Boolean(10 > 9) = " + Boolean(10 > 9);
+      document.getElementById("ex2_boolean_func").innerHTML =
+        "(10 > 9) = " + (10 > 9);
+    </script>
+
+    <hr />
+
+    <!-- Everything With a "Value" is True -->
+    <h2>Everything With a "Value" is True</h2>
+    <p>Example:</p>
+    <p id="ex_true"></p>
+
+    <script>
+      document.getElementById("ex_true").innerHTML =
+        "100 is " +
+        Boolean(100) +
+        "<br>" +
+        "3.14 is " +
+        Boolean(3.14) +
+        "<br>" +
+        "-15 is " +
+        Boolean(-15) +
+        "<br>" +
+        '"Hello" is ' +
+        Boolean("Hello") +
+        "<br>" +
+        "'false' is " +
+        Boolean("false") +
+        "<br>" +
+        "(1 + 7 + 3.14) is " +
+        Boolean(1 + 7 + 3.14);
+    </script>
+
+    <hr />
+
+    <!-- Everything Without a "Value" is False -->
+    <h2>Everything Without a "Value" is False</h2>
+    <p>Example:</p>
+    <p id="ex_flase"></p>
+
+    <script>
+      document.getElementById("ex_flase").innerHTML =
+        "0 is " +
+        Boolean(0) +
+        "<br>" +
+        "-0 is " +
+        Boolean(-0) +
+        "<br>" +
+        "'' is " +
+        Boolean("") +
+        "<br>" +
+        "undefined is " +
+        Boolean(undefined) +
+        "<br>" +
+        "null is " +
+        Boolean(null) +
+        "<br>" +
+        "NaN is " +
+        Boolean(NaN) +
+        "<br>" +
+        "false  is " +
+        Boolean(false) +
+        "<br>";
+    </script>
+
+    <hr />
+
+    <!-- JavaScript Booleans as Objects -->
+    <h2>JavaScript Booleans as Objects</h2>
+    <p>
+      Normally JavaScript booleans are primitive values created from literals:
+    </p>
+    <p>
+      But booleans can also be defined as objects with the keyword <b>new</b>:
+    </p>
+    <p id="ex1_boolean_as_obj"></p>
+
+    <script>
+      // x is a boolean
+      let p = false;
+
+      // y is an object
+      let q = new Boolean(false);
+
+      document.getElementById("ex1_boolean_as_obj").innerHTML =
+        typeof p + "<br>" + typeof q;
+    </script>
+
+    <hr />
+
+    <h2>Warning:</h2>
+    <p>Do not create Boolean objects.</p>
+    <p>
+      The <b>new</b> keyword complicates the code and slows down execution
+      speed.
+    </p>
+    <p>Boolean objects can produce unexpected results:</p>
+    <p id="ex1_boolean_and_boolean_obj"></p>
+
+    <script>
+      // Create a Boolean
+      let first = Boolean(false);
+
+      // Create a Boolean Object
+      let second = new Boolean(false);
+
+      document.getElementById("ex1_boolean_and_boolean_obj").innerHTML =
+        first === second;
+    </script>
+
+    <mark>Comparing two JavaScript objects always returns false. </mark>
+  </body>
 </html>
