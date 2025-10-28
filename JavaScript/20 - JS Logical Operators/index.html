@@ -7,5 +7,121 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript Logical Operators -->
+    <h1>JavaScript Logical Operators</h1>
+    <h2>Logical Operators</h2>
+    <p>Logical operators are used to <b>combine boolean expressions.</b></p>
+    <p>Logical operators can be used to modify the results of comparisons.</p>
+    <p>
+      Typically, you will use a comparison operator to check a condition, and a
+      logical operator to combine conditions into more complex logic.
+    </p>
+
+    <hr />
+
+    <!-- JS Logical AND -->
+    <h2>JavaScript Logical AND</h2>
+    <p>
+      The <b>&& operator</b> returns <code class="highlight_text">true</code> if
+      <b>both expressions</b> are <code class="highlight_text">true</code>,
+      otherwise <code class="highlight_text">false</code>:
+    </p>
+    <p>Example:</p>
+    <p id="ex_logical_and"></p>
+
+    <script>
+      let x = 6;
+      let y = 3;
+      document.getElementById("ex_logical_and").innerHTML =
+        (x < 10 && y > 1) + "<br>" + (x < 10 && y < 1);
+
+      /* 
+            true + true = true
+            false + true = false
+            true + false = false
+            false + false = false
+        */
+    </script>
+
+    <hr />
+
+    <!-- JS Logical OR -->
+    <h2>JavaScript Logical OR</h2>
+    <p>
+      The <b>|| operator</b> returns <code class="highlight_text">true</code> if
+      <b>one or both expressions</b> are
+      <code class="highlight_text">true</code>, otherwise
+      <code class="highlight_text">false</code>:
+    </p>
+    <p>Example:</p>
+    <p id="ex_logical_or"></p>
+
+    <script>
+      let a = 6;
+      let b = -3;
+      let c = a < 0 || b < 0;
+      document.getElementById("ex_logical_or").innerHTML = c;
+
+      /* 
+            true + true = true
+            false + true = true
+            true + false = true
+            false + false = false
+        */
+    </script>
+
+    <hr />
+
+    <!-- JS Logical NOT -->
+    <h2>JavaScript Logical NOT</h2>
+    <p>
+      The NOT operator (!) returns <code class="highlight_text">true</code> for
+      <b>false expressions</b> and <code class="highlight_text">false</code> for
+      <b>true expressions</b>.
+    </p>
+    <p>Example:</p>
+    <p id="ex1_logical_not"></p>
+    <p id="ex2_logical_not"></p>
+
+    <script>
+      document.getElementById("ex1_logical_not").innerHTML = 5 == 8;
+      document.getElementById("ex2_logical_not").innerHTML = !(5 == 8);
+    </script>
+
+    <hr />
+
+    <!-- The Nullish Coalescing Operator (??) -->
+    <h2>The Nullish Coalescing Operator (??)</h2>
+    <p>
+      The <code class="highlight_text">??</code> operator returns the right
+      operand when the left operand is
+      <b>nullish</b>
+      (<code class="highlight_text">null</code> or
+      <code class="highlight_text">undefined</code>), otherwise it returns the
+      left operand.
+    </p>
+    <p>Example:</p>
+    <p id="ex_coalescing_operator"></p>
+    <p>
+      When programming, a lot of values can be <b>falsey</b> (like 0, empty
+      strings, false, undefined, null, NaN).
+    </p>
+    <p>
+      However, sometimes you want to check if a variable is
+      <b>nullish</b> (either <code class="highlight_text">undefined</code> or
+      <code class="highlight_text">null</code>), like when it is okay for a
+      variable to be an empty string, or a false value. Then you can use the
+      <b>nullish coalescing operator</b>.
+    </p>
+    <script>
+      let name = null;
+      //   let name = "null";
+      let text = "missing";
+      let result = name ?? text;
+
+      document.getElementById("ex_coalescing_operator").innerHTML =
+        "The name is " + result;
+    </script>
+  </body>
 </html>
