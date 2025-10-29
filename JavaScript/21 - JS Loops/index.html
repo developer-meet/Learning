@@ -7,5 +7,196 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JS Loops -->
+    <h1>JavaScript Loops</h1>
+    <hr />
+    <p>Loops can execute a block of code a number of times.</p>
+    <hr />
+
+    <h2>JavaScript Loops</h2>
+    <p>
+      Loops are handy, if you want to run the same code over and over again,
+      each time with a different value.
+    </p>
+    <p>Often this is the case when working with arrays:</p>
+    <p>Example:</p>
+    <p id="ex_loop_with_arr"></p>
+
+    <script>
+      const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+      let text = "";
+      for (let i = 0; i < cars.length; i++) {
+        text += cars[i] + "<br>";
+      }
+
+      document.getElementById("ex_loop_with_arr").innerHTML = text;
+    </script>
+
+    <hr />
+
+    <!-- The For Loop -->
+    <h2>The For Loop</h2>
+    <p>
+      The <code class="highlight_text">for</code> statement creates a loop with
+      3 optional expressions:
+    </p>
+    <pre class="border-for-pre">
+      for (expr1; expr2; expr) {
+        // code block to be executed
+      }</pre
+    >
+    <p>
+      <b>exp1</b> is executed <b>one time</b> before the execution of the code
+      block.
+    </p>
+    <p>
+      <b>exp2</b> defines <b>the condition</b> for executing the code block.
+    </p>
+    <p>
+      <b>exp3</b> is executed <b>every time</b> the code block has been
+      executed.
+    </p>
+    <p>Example:</p>
+    <p id="ex_for_loop"></p>
+    <p><b>exp1</b> sets a variable before the loop starts (let i = 0).</p>
+    <p>
+      <b>exp2</b> defines the condition for the loop to run (i must be less than
+      5).
+    </p>
+    <p>
+      <b>exp3</b> increases a value (i++) each time the code block has been
+      executed.
+    </p>
+
+    <script>
+      let allNumber = "";
+      for (let i = 0; i < 5; i++) {
+        allNumber += "The number is " + i + "<br>";
+      }
+      document.getElementById("ex_for_loop").innerHTML = allNumber;
+    </script>
+
+    <hr />
+
+    <!-- Loop Scope -->
+    <h2>Loop Scope</h2>
+    <p>Example:</p>
+    <p id="ex1_loop_scope"></p>
+    <p id="ex2_loop_scope"></p>
+
+    <script>
+      let i = 5;
+      for (i = 0; i < 10; i++) {}
+      document.getElementById("ex1_loop_scope").innerHTML = i;
+
+      let a = 5;
+      for (let a = 0; a <= 10; a++) {
+        document.write(a);
+      }
+
+      document.getElementById("ex2_loop_scope").innerHTML = a;
+    </script>
+
+    <p>
+      In the first example, <code class="highlight_text">let i = 5;</code> is
+      declared outside the loop.
+    </p>
+    <p>
+      In the second example, <code class="highlight_text">let i = 0;</code>, is
+      declared inside the loop.
+    </p>
+    <p>
+      When a variable is declared with
+      <code class="highlight_text">let</code> or
+      <code class="highlight_text">const</code> inside a loop, it will only be
+      visible within the loop.
+    </p>
+
+    <hr />
+
+    <!-- The While Loop -->
+    <h2>The While Loop</h2>
+    <p>
+      The <code class="highlight_text">while</code> loop loops through a block
+      of code as long as a specified condition is true.
+    </p>
+    <p>Syntax:</p>
+    <pre class="border-for-pre">
+      while (condition) {
+        // code block to be executed
+      }</pre
+    >
+    <p>Example:</p>
+    <p>
+      In the following example, the code in the loop will run, over and over
+      again, as long as a variable (i) is less than 10:
+    </p>
+    <p id="ex_while_loop"></p>
+
+    <h3>Note:</h3>
+    <p>
+      If you forget to increase the variable used in the condition, the loop
+      will never end.
+    </p>
+    <p>This will crash your browser.</p>
+
+    <script>
+      let all_nums = "";
+      let p = 0;
+      while (p < 10) {
+        all_nums += "The number is " + p + "<br>";
+        p++;
+      }
+      document.getElementById("ex_while_loop").innerHTML = all_nums;
+    </script>
+
+    <hr />
+
+    <!-- The Do While Loop -->
+    <h2>The Do While Loop</h2>
+    <p>
+      The <code class="highlight_text">do while</code> loop is a variant of the
+      while loop.
+    </p>
+    <p>
+      The <code class="highlight_text">do while</code> loop will execute the
+      code block once, before checking if the condition is true, then it will
+      repeat the loop as long as the condition is true.
+    </p>
+    <p>Syntax:</p>
+    <pre class="border-for-pre">
+      do {
+        // code block to be executed
+      }
+      while (condition);</pre
+    >
+
+    <h3>Note:</h3>
+    <p>
+      The <code class="highlight_text">do while</code> runs at least once, even
+      if the condition is false from the start.
+    </p>
+    <p>
+      This is because the code block is executed before the condition is tested:
+    </p>
+
+    <p>Example:</p>
+    <p id="ex_do_while_loop"></p>
+    <mark
+      >Do not forget to increase the variable used in the condition, otherwise
+      the loop will never end!
+    </mark>
+    <script>
+      let all_text = "";
+      let q = 0;
+
+      do {
+        all_text += "<br>The number is " + q;
+        q++;
+      } while (q < 10);
+
+      document.getElementById("ex_do_while_loop").innerHTML = all_text;
+    </script>
+  </body>
 </html>
