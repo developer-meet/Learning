@@ -7,5 +7,75 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript Continue -->
+    <h1>JavaScript Continue</h1>
+    <h2>The Continue Statement</h2>
+    <p>
+      The <code class="highlight_text">continue</code> statement
+      <b>skips the current iteration</b> in a loop.
+    </p>
+    <p>
+      The remaining code in the iteration is skipped and processing moves to the
+      next iteration.
+    </p>
+    <p>Example:</p>
+    <p>Skip the value of 3:</p>
+    <p id="ex_continue"></p>
+    <script>
+      let nums = "";
+
+      for (let i = 0; i <= 10; i++) {
+        if (i === 3) {
+          continue;
+        }
+        nums += "The number is " + i + "<br>";
+      }
+      document.getElementById("ex_continue").innerHTML = nums;
+    </script>
+
+    <hr />
+
+    <!-- Continue to Labelname-->
+    <h2>Continue to Labelname</h2>
+    <h3>Syntax:</h3>
+    <pre class="border-for-pre">        continue labelname;</pre>
+    <p>Example:</p>
+    <p>Example of Continue to loop1:</p>
+
+    <p id="ex1_continue_with_label"></p>
+    <p>Example of Continue to loop2:</p>
+    <p id="ex2_continue_with_label"></p>
+
+    <script>
+      let text_loop = "";
+      loop1: for (let j = 1; j < 5; j++) {
+        loop2: for (let i = 1; i < 5; i++) {
+          if (i === 3) {
+            continue loop1;
+          }
+          text_loop += i + "<br>";
+        }
+      }
+      document.getElementById("ex1_continue_with_label").innerHTML = text_loop;
+
+      let all_text_loop = "";
+      loop1: for (let j = 1; j < 5; j++) {
+        loop2: for (let i = 1; i < 5; i++) {
+          if (i === 3) {
+            continue loop2;
+          }
+          all_text_loop += i + "<br>";
+        }
+      }
+      document.getElementById("ex2_continue_with_label").innerHTML =
+        all_text_loop;
+    </script>
+
+    <mark
+      ><code class="highlight_text">break</code> and
+      <code class="highlight_text">continue</code> are the only JavaScript
+      statements that can "jump out of" a code block.
+    </mark>
+  </body>
 </html>
