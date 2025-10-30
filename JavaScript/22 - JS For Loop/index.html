@@ -7,5 +7,149 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript For Loop</h1>
+    <p><b>For Loops</b> can execute a block of code a number of times.</p>
+    <p>
+      <b>For Loops</b> are fundamental for tasks like performing an action
+      multiple times.
+    </p>
+
+    <hr />
+
+    <!-- The For Loop -->
+    <h2>The For Loop</h2>
+    <p>
+      The <code class="highlight_text">for</code> statement creates a loop with
+      3 optional expressions:
+    </p>
+    <pre class="border-for-pre">
+      for (expr1; expr2; expr) {
+        // code block to be executed
+      }</pre
+    >
+    <p>
+      <b>exp1</b> is executed (one time) before the execution of the code block.
+    </p>
+    <p><b>exp2</b> defines the condition for executing the code block.</p>
+    <p>
+      <b>exp3</b> is executed (every time) after the code block has been
+      executed.
+    </p>
+    <p>Example:</p>
+    <p>Use a for loop to collect the car names from the cars array:</p>
+    <p id="ex_for_loop"></p>
+
+    <script>
+      const cars = ["BMW", "Volvo", "Saab", "Ford"];
+      let len = cars.length;
+
+      let text = "";
+      for (let i = 0; i < len; i++) {
+        text += cars[i] + "<br>";
+      }
+
+      document.getElementById("ex_for_loop").innerHTML = text;
+    </script>
+
+    <hr />
+
+    <!-- How to use exp 1 -->
+    <h2>How to use exp 1</h2>
+    <p>
+      <b>exp 1</b> is used to initialize the variable(s) used in the loop (let i
+      = 0).
+    </p>
+    <p><b>exp 1</b> is optional.</p>
+    <p>You can omit <b>exp 1</b> if the value is set before the loop starts:</p>
+    <p>Example:</p>
+    <p id="ex_exp_1"></p>
+
+    <script>
+      const carsName = ["BMW", "Volvo", "Saab", "Ford"];
+      let len_carname = carsName.length;
+      let i = 1;
+      let all_text = "";
+      for (; i < len_carname; i++) {
+        all_text += carsName[i] + "<br>";
+      }
+
+      document.getElementById("ex_exp_1").innerHTML = all_text;
+    </script>
+
+    <hr />
+
+    <!-- How to use exp 2 -->
+    <h2>How to use exp 2</h2>
+    <p>
+      <b>exp 2</b> is used to evaluate the condition of the initial variable (i
+      &lt; len).
+    </p>
+    <p>exp 2 is also optional.</p>
+    <p>
+      If exp 2 returns <code class="highlight_text">false</code>, the loop will
+      end.
+    </p>
+
+    <h3>Note:</h3>
+    <p>If you omit exp 2, you must provide a <b>break</b> inside the loop.</p>
+    <p>Otherwise the loop will never end.</p>
+    <p>This will crash your browser.</p>
+
+    <hr />
+
+    <!-- How to use exp 3 -->
+    <h2>How to use exp 3</h2>
+    <p><b>exp 3</b> increments the value of the initial variable (i++).</p>
+    <p><b>exp 3</b> is optional.</p>
+    <p>
+      <b>exp 3</b> can do anything like negative increment (i--), positive
+      increment (i = i + 15), or anything else.
+    </p>
+    <p>
+      <b>exp 3</b> can be omitted (if you increment the value inside the loop):
+    </p>
+    <p id="ex_exp_3"></p>
+
+    <script>
+      const cars_name = ["BMW", "Volvo", "Saab", "Ford"];
+      let lenofcar = cars_name.length;
+      let a = 0;
+
+      let textofcar = "";
+      for (; a < lenofcar; ) {
+        textofcar += cars_name[a] + "<br>";
+        a++;
+      }
+
+      document.getElementById("ex_exp_3").innerHTML = textofcar;
+    </script>
+
+    <hr />
+
+    <!-- Loop Scope -->
+    <h2>Loop Scope</h2>
+    <p>Using <code class="highlight_text">var</code> in a loop:</p>
+
+    <p id="ex_loop_scope_var"></p>
+    <p>Using <code class="highlight_text">let</code> in a loop:</p>
+    <p id="ex_loop_scope_let"></p>
+
+    <script>
+      var b = 5;
+
+      for (var b = 0; b < 10; b++) {
+        // some statements
+      }
+
+      let c = 5;
+
+      for (let c = 0; c < 10; c++) {
+        // some statements
+      }
+
+      document.getElementById("ex_loop_scope_var").innerHTML = b;
+      document.getElementById("ex_loop_scope_let").innerHTML = c;
+    </script>
+  </body>
 </html>
