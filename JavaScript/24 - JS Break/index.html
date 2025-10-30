@@ -7,5 +7,195 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JS Break -->
+    <h1>JavaScript Break</h1>
+    <h2>The Break Statement</h2>
+    <p>
+      The <code class="highlight_text">break</code> statement "jumps out" of
+      loops and switches.
+    </p>
+    <p>
+      The <code class="highlight_text">break</code> statement
+      <b>terminates</b> the execution of a <b>loop</b> or a
+      <b>switch</b> statement.
+    </p>
+
+    <hr />
+
+    <!-- Break in Loops -->
+    <h2>Break in Loops</h2>
+    <p>
+      When <code class="highlight_text">break</code> is encountered in a loop,
+      <b>the loop terminates immediately.</b>
+    </p>
+    <p>
+      The program control is transfered to the statements following the loop.
+    </p>
+    <p><b>No more loop iterations are</b> executed.</p>
+    <p>Example:</p>
+    <p>Terminate the loop (break the loop) when the loop counter (i) is 3:</p>
+    <p id="ex_break_in_loop"></p>
+    <h3>Note :</h3>
+    <p>
+      You have already seen the
+      <code class="highlight_text">break</code> statement used in an earlier
+      chapter of this tutorial.
+    </p>
+    <p>
+      It was used to "jump out" of a
+      <code class="highlight_text">switch</code> statement.
+    </p>
+
+    <script>
+      let text = "";
+
+      for (let i = 0; i < 10; i++) {
+        if (i === 3) {
+          break;
+        }
+        text += "The number is " + i + "<br>";
+      }
+
+      document.getElementById("ex_break_in_loop").innerHTML = text;
+    </script>
+
+    <hr />
+
+    <!-- Break in a Switch -->
+    <h2>Break in a Switch</h2>
+    <p>
+      In a <code class="highlight_text">switch</code> statement, a
+      <code class="highlight_text">break</code>
+      statement will exit the switch block after a matching case is executed.
+      Without break, execution would "fall through" to subsequent case blocks.
+    </p>
+    <p>Example :</p>
+    <p id="ex_break_in_switch"></p>
+    <h3>Note:</h3>
+    <p>
+      The <code class="highlight_text">break</code> keyword is crucial for
+      preventing a switch "fall-through."
+    </p>
+
+    <script>
+      let color = ["Red", "green", "blue", "yellow"];
+
+      switch (Math.floor(Math.random() * color.length)) {
+        case 0:
+          color_name = "Red";
+          break;
+        case 1:
+          color_name = "Green";
+          break;
+        case 2:
+          color_name = "Blue";
+          break;
+        case 3:
+          color_name = "Yellow";
+          break;
+      }
+
+      document.getElementById(
+        "ex_break_in_switch"
+      ).innerHTML = `Color is ${color_name}`;
+    </script>
+
+    <hr />
+
+    <!-- JavaScript Labels -->
+    <h2>JavaScript Labels</h2>
+    <p>
+      A label provides a name for a statement, or a block of statements,
+      allowing statements to be referenced to, for program flow control,
+      particularly in loops.
+    </p>
+    <h3>Syntax:</h3>
+    <p>A label is an identifier followed by a colon (:).</p>
+    <pre class="border-for-pre">        labelname: statement;</pre>
+    <p>A label precedes a statement or a block of code.</p>
+    <pre class="border-for-pre">
+        labelname: {
+            statements
+        }</pre
+    >
+
+    <hr />
+
+    <!-- Labeled Break -->
+    <h2>Labeled Break</h2>
+    <p>
+      The <code class="highlight_text">break</code> statement exits a loop or
+      block and transfers the control to the labeled statement.
+    </p>
+    <p>
+      The <code class="highlight_text">break</code> statement is particularly
+      useful for breaking out of inner or outer loops from nested loops.
+    </p>
+    <p>Example:</p>
+    <p>Break to loop1:</p>
+    <p id="ex1_break_label"></p>
+    <p>Break to loop2:</p>
+    <p id="ex2_break_label"></p>
+
+    <script>
+      let loop1_text = "";
+      let loop2_text = "";
+
+      loop1: for (let j = 1; j < 5; j++) {
+        loop2: for (let i = 1; i < 5; i++) {
+          if (i === 3) {
+            break loop1;
+          }
+          loop1_text += i + "<br>";
+        }
+      }
+
+      loop1: for (let j = 1; j < 5; j++) {
+        loop2: for (let i = 1; i < 5; i++) {
+          if (i === 3) {
+            break loop2;
+          }
+          loop2_text += i + "<br>";
+        }
+      }
+      document.getElementById("ex1_break_label").innerHTML = loop1_text;
+      document.getElementById("ex2_break_label").innerHTML = loop2_text;
+    </script>
+
+    <h3>Note:</h3>
+    <p>
+      <code class="highlight_text">break</code> and
+      <code class="highlight_text">continue</code> are the only JavaScript
+      statements that can "jump out of" a code block.
+    </p>
+    <p>A code block is a block of code between { and }.</p>
+    <p>
+      Without a label reference, <code class="highlight_text">break</code> can
+      only
+      <b>jump out of a loop or a switch.</b>
+    </p>
+    <p>
+      With a label reference, <code class="highlight_text">break</code> can
+      <b>jump out of any code block:</b>
+    </p>
+    <p>Example:</p>
+    <p>Break out of the block after the second car:</p>
+    <p id="demo"></p>
+
+    <script>
+      const cars = ["BMW", "Volvo", "Saab", "Ford"];
+      let cartext = "";
+
+      list: {
+        cartext += cars[0] + "<br>";
+        cartext += cars[1] + "<br>";
+        break list;
+        cartext += cars[2] + "<br>";
+        cartext += cars[3] + "<br>";
+      }
+
+      document.getElementById("demo").innerHTML = cartext;
+    </script>
+  </body>
 </html>
