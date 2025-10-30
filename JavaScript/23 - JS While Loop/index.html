@@ -7,5 +7,131 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JavaScript While Loop -->
+    <h1>JavaScript While Loop</h1>
+    <p>
+      Some loops execute a block of code as long as a specified condition is
+      true.
+    </p>
+
+    <hr />
+
+    <h2>The While Loop</h2>
+    <p>
+      The <code class="highlight_text">while</code> loop loops through a block
+      of code as long as a specified condition is true.
+    </p>
+    <h3>Syntax:</h3>
+    <pre class="border-for-pre">
+      while (condition) {
+        // code block to be executed
+      }</pre
+    >
+    <p>
+      In the following example, the code in the loop will run, over and over
+      again, as long as a variable (i) is less than 10:
+    </p>
+    <p>Example:</p>
+    <p id="ex_while_loop"></p>
+    <h3>Note:</h3>
+    <p>
+      If you forget to increase the variable used in the condition, the loop
+      will never end.
+    </p>
+    <p>This will crash your browser.</p>
+    <script>
+      let text = "";
+      let i = 0;
+      while (i < 10) {
+        text += "The number is " + i + "<br>";
+        i++;
+      }
+      document.getElementById("ex_while_loop").innerHTML = text;
+    </script>
+
+    <hr />
+
+    <!-- The Do While Loop -->
+    <h2>The Do While Loop</h2>
+    <p>
+      The <code class="highlight_text">do while</code> loop is a variant of the
+      while loop. This loop will execute the code block once, before checking if
+      the condition is true, then it will repeat the loop as long as the
+      condition is true.
+    </p>
+    <h3>Syntax:</h3>
+    <pre class="border-for-pre">
+      do {
+        // code block to be executed
+      }
+      while (condition);</pre
+    >
+    <h3>Note</h3>
+    <p>
+      The <code class="highlight_text">do while</code> runs at least once, even
+      if the condition is false from the start.
+    </p>
+    <p>
+      This is because the code block is executed before the condition is tested:
+    </p>
+    <p>Example :</p>
+    <p id="ex_do_while_loop"></p>
+    <mark
+      >Do not forget to increase the variable used in the condition, otherwise
+      the loop will never end!
+    </mark>
+    <script>
+      let numbers = "";
+      let a = 0;
+
+      do {
+        numbers += "The number is " + a + " <br>";
+        a++;
+      } while (a <= 10);
+
+      document.getElementById("ex_do_while_loop").innerHTML = numbers;
+    </script>
+
+    <hr />
+
+    <!-- Comparing For and While -->
+    <h2>Comparing For and While</h2>
+    <p>
+      A while loop is much the same as a for loop, with statement 1 and
+      statement 3 omitted.
+    </p>
+    <p>Example:</p>
+    <p>
+      Uses a <code class="highlight_text">for</code> loop to collect the car
+      names from the cars array:
+    </p>
+    <p id="ex_for_loop"></p>
+    <p>
+      Use a <code class="highlight_text">while</code> loop to collect the car
+      names from the cars array:
+    </p>
+    <p id="another_ex_while_loop"></p>
+
+    <script>
+      let cars = ["BMW", "Volvo", "Ford", "TATA"];
+      let allText = "";
+      let b = 0;
+      for (; cars[b]; ) {
+        allText += cars[b] + "<br>";
+        b++;
+      }
+
+      let carName = ["BMW", "Volvo", "Ford", "TATA"];
+      let all_Text = "";
+      let c = 0;
+      while (carName[c]) {
+        all_Text += carName[c] + "<br>";
+        c++;
+      }
+
+      document.getElementById("ex_for_loop").innerHTML = allText;
+      document.getElementById("another_ex_while_loop").innerHTML = all_Text;
+    </script>
+  </body>
 </html>
