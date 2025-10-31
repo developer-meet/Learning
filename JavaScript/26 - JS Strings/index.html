@@ -7,5 +7,145 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JS Strings -->
+    <h1>JavaScript Strings</h1>
+    <p>Strings are for <b>storing text</b></p>
+    <p>Strings are written <b>with quotes</b></p>
+
+    <hr />
+
+    <!-- Using Quotes -->
+    <h2>Using Quotes</h2>
+    <p>A JavaScript string is zero or more characters written inside quotes.</p>
+    <p>You can use single or double quotes:</p>
+    <h3>Example:</h3>
+    <p id="ex_single_double_quotes_str"></p>
+
+    <script>
+      let carName1 = "BMW M4";
+      let carName2 = "BMW M5"; // let carName2 = 'BMW M5';
+
+      document.getElementById("ex_single_double_quotes_str").innerHTML =
+        carName1 + ", " + carName2;
+    </script>
+
+    <hr />
+
+    <!-- Quotes Inside Quotes -->
+    <h2>Quotes Inside Quotes</h2>
+    <p>
+      You can use quotes inside a string, as long as they don't match the quotes
+      surrounding the string:
+    </p>
+    <h3>Example:</h3>
+    <p id="quotes_inside_quotes"></p>
+    <script>
+      let myName = "My name is 'Meet Satapara'";
+      let MyName = 'My name is "Meet Satapara"';
+
+      document.getElementById("quotes_inside_quotes").innerHTML =
+        myName + "<br>" + MyName;
+    </script>
+
+    <hr />
+
+    <!-- Template Strings -->
+    <h2>Template Strings</h2>
+    <p>Templates were introduced with ES6 (JavaScript 2016).</p>
+    <p>
+      Templates are strings enclosed in backticks (`This is a template string`).
+    </p>
+    <p>Templates allow multiline strings:</p>
+    <p>Templates allow single and double quotes inside a string:</p>
+    <h3>Example:</h3>
+    <p id="ex_template_strings"></p>
+    <p id="ex_multiline_template_str"></p>
+    <script>
+      let text = `He's often call me "Meet"`;
+      document.getElementById("ex_template_strings").innerHTML = text;
+
+      let nameofcar = `Car name
+                        is BMW 
+                        M5.`;
+
+      document.getElementById("ex_multiline_template_str").innerHTML =
+        nameofcar;
+    </script>
+
+    <hr />
+
+    <!-- String Length -->
+    <h2>String Length</h2>
+    <p>
+      To find the length of a string, use the built-in
+      <code class="highlight_text">length</code> property:
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_length"></p>
+
+    <script>
+      let abcd = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      document.getElementById("ex_length").innerHTML =
+        abcd + "<br>" + abcd.length;
+    </script>
+
+    <hr />
+
+    <!-- Escape Characters -->
+    <h2>Escape Characters</h2>
+    <p>
+      Because strings must be written within quotes, JavaScript will
+      misunderstand this string:
+    </p>
+    <p>To solve this problem, you can use an backslash escape character.</p>
+    <p>
+      The backslash escape character (<code class="highlight_text">\</code>)
+      turns special characters into string characters:
+    </p>
+    <h3>Examples:</h3>
+    <p id="ex1_escape_characters"></p>
+
+    <script>
+      let my_name = 'My name is "Meet Satapara"'; // "My name is \"Meet Satapara\"."
+      document.getElementById("ex1_escape_characters").innerHTML = my_name;
+    </script>
+
+    <hr />
+
+    <!-- JS Strings as Objects -->
+    <h2>JavaScript Strings as Objects</h2>
+    <p>
+      Normally, JavaScript strings are primitive values, created from literals:
+    </p>
+    <p>
+      But strings can also be defined as objects with the keyword
+      <code class="highlight_text">new</code>:
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_str_as_obj"></p>
+
+    <script>
+      // x is a string
+      let x = "John";
+
+      // y is an object
+      let y = new String("John");
+
+      document.getElementById("ex_str_as_obj").innerHTML =
+        typeof x + "<br>" + typeof y;
+    </script>
+
+    <p>String objects can produce unexpected results:</p>
+    <p id="ex_str_results"></p>
+
+    <script>
+      let a = "John"; // a is a string
+      let b = new String("John"); // b is an object
+      document.getElementById("ex_str_results").innerHTML =
+        "a == b → " + (a == b) + "<br>" + "a === b → " + (a === b);
+    </script>
+
+    <mark>Comparing two JavaScript objects always returns false. </mark>
+  </body>
 </html>
