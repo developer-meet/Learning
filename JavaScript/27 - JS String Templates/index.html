@@ -7,5 +7,100 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JS String Templates -->
+    <h1>JavaScript String Templates</h1>
+    <h2>Back-Tics Syntax</h2>
+    <p>
+      <b>Template Strings</b> use back-ticks (``) rather than the quotes ("") to
+      define a string:
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_back-ticks"></p>
+
+    <script>
+      let hw = `Hello world!`;
+      document.getElementById("ex_back-ticks").innerHTML = hw;
+    </script>
+
+    <hr />
+
+    <!-- Quotes Inside Strings -->
+    <h2>Quotes Inside Strings</h2>
+    <p>
+      <b>Template Strings</b> allow both single and double quotes inside a
+      string:
+    </p>
+    <h3>Example:</h3>
+
+    <p id="ex_quotes_inside_str"></p>
+
+    <script>
+      let text = `Car name is "BMW".`;
+      document.getElementById("ex_quotes_inside_str").innerHTML = text;
+    </script>
+
+    <hr />
+
+    <!-- Interpolation -->
+    <h2>Interpolation</h2>
+    <p><b>Template Strings</b> allow variables in strings.</p>
+    <p>
+      Template strings provide an easy way to <b>interpolate</b> variables in
+      strings.
+    </p>
+    <h3>Syntax:</h3>
+    <pre class="border-for-pre">        ${...}</pre>
+
+    <h3>Example:</h3>
+    <p id="ex_str_interpolation"></p>
+    <script>
+      let firstName = "Meet";
+      let lastName = "Satapara";
+
+      let fullName = `Welcome, ${firstName} ${lastName}!`;
+      document.getElementById("ex_str_interpolation").innerHTML = fullName;
+    </script>
+
+    <hr />
+
+    <!-- Expression Substitution -->
+    <h2>Expression Substitution</h2>
+    <p>
+      <b>Template Strings</b> allow <b>interpolation of expressions</b> in
+      strings:
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_expression_substitution"></p>
+
+    <script>
+      let price = 10;
+      let VAT = 0.25;
+      let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+
+      document.getElementById("ex_expression_substitution").innerHTML = total;
+    </script>
+
+    <hr />
+
+    <!-- HTML Templates -->
+    <h2>HTML Templates</h2>
+    <h3>Example:</h3>
+    <p id="ex_html_templates"></p>
+
+    <script>
+      let header = "Template Strings";
+      let tags = ["template strings", "javascript", "es6"];
+
+      let html = `<h2>${header}</h2><ul>`;
+
+      for (const x of tags) {
+        html += `<li>${x}</li>`;
+      }
+
+      html += `</ul>`;
+
+      document.getElementById("ex_html_templates").innerHTML = html;
+    </script>
+  </body>
 </html>
