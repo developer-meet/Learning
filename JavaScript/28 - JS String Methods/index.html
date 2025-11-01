@@ -7,5 +7,698 @@
 
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- JS String Methods -->
+    <h1>JavaScript String Methods</h1>
+    <p>
+      Javascript strings are primitive and immutable: All string methods produce
+      a new string without altering the original string.
+    </p>
+
+    <hr />
+
+    <!-- JS String Length -->
+    <h2>JavaScript String Length</h2>
+    <p>
+      The <code class="highlight_text">length</code> property returns the length
+      of a string:
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_length_method"></p>
+
+    <script>
+      let abcd = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      document.getElementById("ex_length_method").innerHTML = abcd.length;
+    </script>
+
+    <hr />
+
+    <!-- Extracting String Characters -->
+    <h2>Extracting String Characters</h2>
+    <p>There are 4 methods for extracting string characters:</p>
+    <ul>
+      <li>The <code class="highlight_text">at(position)</code> Method</li>
+      <li>The <code class="highlight_text">charAt(position)</code> Method</li>
+      <li>
+        The <code class="highlight_text">charCodeAt(position)</code> Method
+      </li>
+      <li>Using property access [] like in arrays</li>
+    </ul>
+
+    <hr />
+
+    <!-- JS String charAt() -->
+    <h2>JavaScript String charAt()</h2>
+    <p>
+      The <code class="highlight_text">charAt()</code> method returns the
+      character at a specified index (position) in a string:
+    </p>
+    <h3>Example:</h3>
+
+    <p id="ex_charAt"></p>
+
+    <script>
+      let hw = "HELLO WORLD";
+      document.getElementById("ex_charAt").innerHTML = hw.charAt(0);
+    </script>
+
+    <hr />
+
+    <!-- JS String charCodeAt() -->
+    <h2>JavaScript String charCodeAt()</h2>
+    <p>
+      The <code class="highlight_text">charCodeAt()</code> method returns the
+      code of the character at a specified index in a string:
+    </p>
+    <p>The method returns a UTF-16 code (an integer between 0 and 65535).</p>
+    <h3>Example:</h3>
+    <p id="ex_charCodeAt"></p>
+
+    <script>
+      let text = "HELLO WORLD";
+      document.getElementById("ex_charCodeAt").innerHTML = text.charCodeAt(0);
+    </script>
+
+    <hr />
+
+    <!-- JS codePointAt() -->
+    <h2>JavaScript codePointAt()</h2>
+    <h3>Example:</h3>
+    <p id="ex_codePointAt"></p>
+
+    <script>
+      let myname = "Meet Satapara";
+      let code = myname.codePointAt(0);
+
+      document.getElementById("ex_codePointAt").innerHTML = code;
+    </script>
+
+    <hr />
+
+    <!-- JavaScript String at() -->
+    <h2>JavaScript String at()</h2>
+    <p>
+      ES2022 introduced the string method
+      <code class="highlight_text">at()</code>:
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_at"></p>
+    <p>It allows the use of negative indexes while charAt() do not.</p>
+    <script>
+      const name = "College";
+      let letter = name.at(2);
+
+      document.getElementById("ex_at").innerHTML = letter;
+    </script>
+
+    <hr />
+
+    <!-- Property Access [ ] -->
+    <h2>Property Access [ ]</h2>
+    <h3>Example:</h3>
+    <p id="ex_access"></p>
+
+    <script>
+      let another_text = "HELLO WORLD";
+      another_text[0] = "A"; // gives no error (but does not work!)
+      document.getElementById("ex_access").innerHTML = another_text[1];
+    </script>
+
+    <h3>Note:</h3>
+    <p>Property access might be a little <b>unpredictable:</b></p>
+    <ul>
+      <li>It makes strings look like arrays (but they are not)</li>
+      <li>
+        If no character is found, [ ] returns undefined, while charAt() returns
+        an empty string.
+      </li>
+      <li>It is read only. str[0] = "A" gives no error (but does not work!)</li>
+    </ul>
+
+    <hr />
+
+    <!-- JS String concat() -->
+    <h2>JavaScript String concat()</h2>
+    <p>
+      <code class="highlight_text">concat()</code> joins two or more strings:
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_concat"></p>
+    <p>
+      The <code class="highlight_text">concat()</code> method can be used
+      instead of the plus operator. These two lines do the same:
+    </p>
+    <script>
+      let text1 = "Hello";
+      let text2 = "World!";
+      let text3 = text1.concat(" ", text2);
+      document.getElementById("ex_concat").innerHTML = text3;
+    </script>
+
+    <h3>Note:</h3>
+    <p>
+      All string methods return a new string. They don't modify the original
+      string.
+    </p>
+    <p>Formally said:</p>
+    <p>Strings are immutable: Strings cannot be changed, only replaced.</p>
+
+    <hr />
+
+    <!-- Extracting String Parts -->
+    <h2>Extracting String Parts</h2>
+    <p>There are 3 methods for extracting a part of a string:</p>
+    <ul>
+      <li><code class="highlight_text">slice(start, end) </code></li>
+      <li><code class="highlight_text">substring(start, end) </code></li>
+      <li><code class="highlight_text">substr(start, length) </code></li>
+    </ul>
+
+    <hr />
+
+    <!-- String slice() -->
+    <h2>String slice()</h2>
+    <p>
+      <code class="highlight_text">slice() </code> extracts a part of a string
+      and returns the extracted part in a new string.
+    </p>
+    <p>
+      The method takes 2 parameters: start position, and end position (end not
+      included).
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_slice"></p>
+
+    <script>
+      let fruit_names = "Apple, Banana, Kiwi";
+      let part1 = fruit_names.slice(0, 5);
+      let part2 = fruit_names.slice(7);
+      let part3 = fruit_names.slice(-12);
+      let part4 = fruit_names.slice(-12, -6);
+
+      document.getElementById("ex_slice").innerHTML =
+        part1 + "<br>" + part2 + "<br>" + part3 + "<br>" + part4;
+    </script>
+
+    <hr />
+
+    <!-- String substring() -->
+    <h2>String substring()</h2>
+    <p>
+      <code class="highlight_text">substring()</code> is similar to
+      <code class="highlight_text">slice()</code>.
+    </p>
+    <p>
+      The difference is that start and end values less than 0 are treated as 0
+      in <code class="highlight_text">substring()</code>.
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_substring"></p>
+    <p>
+      If you omit the second parameter,
+      <code class="highlight_text">substring()</code> will slice out the rest of
+      the string.
+    </p>
+
+    <script>
+      let str = "Laptop, Mobile, Tablet";
+      document.getElementById("ex_substring").innerHTML = str.substring(0, 6);
+    </script>
+
+    <hr />
+
+    <!-- JavaScript String substr() -->
+    <h2>JavaScript String substr()</h2>
+    <p>
+      <code class="highlight_text">substr()</code> is similar to
+      <code class="highlight_text">slice()</code>.
+    </p>
+    <p>
+      The difference is that the second parameter specifies the <b>length</b> of
+      the extracted part.
+    </p>
+    <h3>Warning</h3>
+    <p>
+      The <code class="highlight_text">substr()</code> method is removed
+      (deprecated) in the latest JavaScript standard.
+    </p>
+    <p>
+      Use <code class="highlight_text">substring()</code> or
+      <code class="highlight_text">slice()</code> instead.
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_substr"></p>
+
+    <script>
+      let carName = "BMW, TATA, Audi";
+      document.getElementById("ex_substr").innerHTML =
+        carName.substr(5, 4) +
+        "<br>" +
+        carName.substr(5) +
+        "<br>" +
+        carName.substr(-15);
+    </script>
+
+    <hr />
+
+    <!-- Converting to Upper and Lower Case -->
+    <h2>Converting to Upper and Lower Case</h2>
+    <p>
+      A string is converted to upper case with
+      <code class="highlight_text">toUpperCase()</code>:
+    </p>
+    <p>
+      A string is converted to lower case with
+      <code class="highlight_text">toLowerCase()</code>:
+    </p>
+
+    <hr />
+
+    <!-- JS String toUpperCase() -->
+    <h2>JavaScript String toUpperCase()</h2>
+    <h3>Example:</h3>
+    <button onclick="myFunction()">Try it</button>
+    <p id="ex_touppercase">Hello World!</p>
+
+    <script>
+      function myFunction() {
+        let HW = document.getElementById("ex_touppercase").innerHTML;
+
+        document.getElementById("ex_touppercase").innerHTML =
+          text.toUpperCase();
+      }
+    </script>
+
+    <hr />
+
+    <!-- JS String toLowerCase() -->
+    <h2>JavaScript String toLowerCase()</h2>
+    <h3>Example:</h3>
+    <button onclick="myFunction()">Try it</button>
+    <p id="ex_tolowercase">Hello World!</p>
+
+    <script>
+      function myFunction() {
+        let HW = document.getElementById("ex_tolowercase").innerHTML;
+
+        document.getElementById("ex_tolowercase").innerHTML =
+          text.toLowerCase();
+      }
+    </script>
+
+    <hr />
+
+    <!-- JS String isWellFormed() -->
+    <h2>JavaScript String isWellFormed()</h2>
+    <p>
+      The <code class="highlight_text">isWellFormed()</code> method returns
+      <code class="highlight_text">true</code>
+      if a string is well formed.
+    </p>
+    <p>Otherwise it returns <code class="highlight_text">false</code>.</p>
+    <p>A string is not well formed if it contains <b>lone surrogates</b>.</p>
+    <h3>Example:</h3>
+    <p id="ex1_iswellformed"></p>
+    <p id="ex2_iswellformed"></p>
+
+    <script>
+      let str1 = "Hello world!";
+      let result = str1.isWellFormed();
+
+      let str2 = "Hello world! \uD800";
+      let $result = str2.isWellFormed();
+
+      document.getElementById("ex1_iswellformed").innerHTML =
+        str1 + "<br>" + result;
+      document.getElementById("ex2_iswellformed").innerHTML =
+        str2 + "<br>" + $result;
+    </script>
+
+    <h3>Lone Surrogates</h3>
+    <p>
+      A <b>lone surrogate</b> is a Unicode surrogate code point that is not part
+      of a valid surrogate pair used to represent characters in UTF-16 encoding.
+    </p>
+
+    <hr />
+
+    <!-- JS String toWellFormed() -->
+    <h2>JavaScript String toWellFormed()</h2>
+    <p>
+      The String method
+      <code class="highlight_text">toWellFormed()</code> returns a new string
+      where all "lone surrogates" are replaced with the Unicode replacement
+      character (U+FFFD).
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_towellformed"></p>
+
+    <script>
+      let $string = "Hello world \uD800";
+      let ans = $string.toWellFormed();
+
+      document.getElementById("ex_towellformed").innerHTML = ans;
+    </script>
+
+    <hr />
+
+    <!-- JS String trim() -->
+    <h2>JavaScript String trim()</h2>
+    <p>
+      The <code class="highlight_text">trim()</code> method removes whitespace
+      from both sides of a string:
+    </p>
+    <p>Example:</p>
+    <p id="ex_trim"></p>
+    <script>
+      let Name1 = "   Meet Satapara   ";
+      let Name2 = Name1.trim();
+
+      document.getElementById("ex_trim").innerHTML =
+        "Length Name1 = " + Name1.length + "<br>Length Name2 = " + Name2.length;
+    </script>
+
+    <hr />
+
+    <!-- JS String trimStart() -->
+    <h2>JavaScript String trimStart()</h2>
+    <p>
+      The <code class="highlight_text">trimStart()</code> method works like
+      <code class="highlight_text">trim()</code>, but removes whitespace only
+      from the start of a string.
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_trimstart"></p>
+    <script>
+      {
+        let text1 = "     Hello World!     ";
+        let text2 = text1.trimStart();
+
+        document.getElementById("ex_trimstart").innerHTML =
+          "Length text1 = " +
+          text1.length +
+          "<br>Length text2 = " +
+          text2.length;
+      }
+    </script>
+
+    <hr />
+
+    <!-- JS String trimEnd() -->
+    <h2>JS String trimEnd()</h2>
+    <p>
+      The <code class="highlight_text">trimEnd()</code> method works like
+      <code class="highlight_text">trim()</code>, but removes whitespace only
+      from the end of a string.
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_trimend"></p>
+    <script>
+      {
+        let text1 = "     Hello World!     ";
+        let text2 = text1.trimEnd();
+
+        document.getElementById("ex_trimend").innerHTML =
+          "Length text1 = " +
+          text1.length +
+          "<br>Length text2 = " +
+          text2.length;
+      }
+    </script>
+
+    <hr />
+
+    <!-- JS String Padding -->
+    <h2>JavaScript String Padding</h2>
+    <p>
+      ECMAScript 2017 added two new string methods to JavaScript: padStart() and
+      padEnd() to support padding at the beginning and at the end of a string.
+    </p>
+
+    <hr />
+
+    <!-- JS String padStart() -->
+    <h2>JavaScript String padStart()</h2>
+    <p>
+      The <code class="highlight_text">padStart()</code> method pads a string
+      from the start.
+    </p>
+    <p>
+      It pads a string with another string (multiple times) until it reaches a
+      given length.
+    </p>
+    <h3>Example:</h3>
+    <p>Pad a string with "0" until it reaches the length 4:</p>
+    <p id="ex_padstart"></p>
+
+    <script>
+      let num1 = "5";
+      text = num1.padStart(5, "0");
+
+      document.getElementById("ex_padstart").innerHTML = text;
+    </script>
+
+    <h3>Note:</h3>
+    <p>
+      The <code class="highlight_text">padStart()</code> method is a string
+      method.
+    </p>
+    <p>To pad a number, convert the number to a string first.</p>
+    <p>See the example below.</p>
+    <p id="ex_padstart_str_method"></p>
+
+    <script>
+      let numb = 5;
+      let Text = numb.toString();
+      document.getElementById("ex_padstart_str_method").innerHTML =
+        Text.padStart(4, 0);
+    </script>
+
+    <hr />
+
+    <!-- JS String padEnd() -->
+    <h2>JavaScript String padEnd()</h2>
+    <p>
+      The <code class="highlight_text">padEnd()</code> method pads a string from
+      the end.
+    </p>
+    <p>
+      It pads a string with another string (multiple times) until it reaches a
+      given length.
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_padend"></p>
+    <p id="ex_padend_str_method"></p>
+    <script>
+      let num2 = "5";
+      num2 = num2.padEnd(4, "0");
+
+      document.getElementById("ex_padend").innerHTML = num2;
+
+      let num3 = 5;
+      let _text = num3.toString();
+      document.getElementById("ex_padend_str_method").innerHTML = _text.padEnd(
+        4,
+        "x"
+      );
+    </script>
+
+    <hr />
+
+    <!-- JavaScript String repeat() -->
+    <h2>JavaScript String repeat()</h2>
+    <p>
+      The <code class="highlight_text">repeat()</code> method returns a string
+      with a number of copies of a string.
+    </p>
+    <p>
+      The <code class="highlight_text">repeat()</code> method returns a new
+      string.
+    </p>
+    <p>
+      The <code class="highlight_text">repeat()</code> method does not change
+      the original string.
+    </p>
+    <h3>Example:</h3>
+    <p id="ex_repeat"></p>
+
+    <script>
+      let car1 = "BMW";
+      let answer = car1.repeat(2);
+
+      document.getElementById("ex_repeat").innerHTML = answer;
+    </script>
+
+    <h3>Syntax:</h3>
+    <pre class="border-for-pre">      string.repeat(count)</pre>
+
+    <h3>Parameters</h3>
+    <p>count → Required. The number of copies wanted.</p>
+
+    <h3>Return Value</h3>
+    <p>String → A new string containing the copies.</p>
+
+    <hr />
+
+    <!-- Replacing String Content -->
+    <h2>Replacing String Content</h2>
+    <p>
+      The <code class="highlight_text">replace()</code> method replaces a
+      specified value with another value in a string:
+    </p>
+    <h3>Example:</h3>
+    <button onclick="replacetext()">Click Me!</button>
+    <p id="ex_replace">Please visit Microsoft Microsoft!</p>
+
+    <script>
+      function replacetext() {
+        let line1 = document.getElementById("ex_replace").innerHTML;
+        document.getElementById("ex_replace").innerHTML = line1.replace(
+          "Microsoft",
+          "W3Schools"
+        );
+      }
+    </script>
+
+    <h3>Note:</h3>
+    <p>
+      The <code class="highlight_text">replace()</code> method does not change
+      the string it is called on.
+    </p>
+    <p>
+      The <code class="highlight_text">replace()</code> method returns a new
+      string.
+    </p>
+    <p>
+      The <code class="highlight_text">replace()</code> method replaces only the
+      first match
+    </p>
+    <p>
+      If you want to replace all matches, use a regular expression with the /g
+      flag set. See examples below.
+    </p>
+    <p>
+      By default, the replace() method is case sensitive. Writing MICROSOFT
+      (with upper-case) will not work:
+    </p>
+
+    <hr />
+
+    <p>
+      To replace case insensitive, use a regular expression with an /i flag
+      (insensitive):
+    </p>
+    <h3>Example:</h3>
+    <button onclick="replacewithi()">Click Me!</button>
+    <p id="ex_replace_/i">Please visit Microsoft!</p>
+    <mark>Regular expressions are written without quotes. </mark>
+    <script>
+      function replacewithi() {
+        let text = document.getElementById("ex_replace_/i").innerHTML;
+        document.getElementById("ex_replace_/i").innerHTML = text.replace(
+          /MICROSOFT/i,
+          "W3Schools"
+        );
+      }
+    </script>
+
+    <hr />
+
+    <p>
+      To replace all matches, use a regular expression with a /g flag (global
+      match):
+    </p>
+    <button onclick="replacewithg()">Try it</button>
+
+    <p id="ex_replace_/g">Please visit Microsoft and Microsoft!</p>
+
+    <script>
+      function replacewithg() {
+        let text = document.getElementById("ex_replace_/g").innerHTML;
+        document.getElementById("ex_replace_/g").innerHTML = text.replace(
+          /Microsoft/g,
+          "W3Schools"
+        );
+      }
+    </script>
+
+    <hr />
+
+    <!-- JS String ReplaceAll() -->
+    <h2>JavaScript String ReplaceAll()</h2>
+    <h3>Example:</h3>
+    <p id="ex_replaceall"></p>
+    <p>
+      The <code class="highlight_text">replaceAll()</code> method allows you to
+      specify a regular expression instead of a string to be replaced.
+    </p>
+    <p>
+      If the parameter is a regular expression, the global flag (g) must be set,
+      otherwise a TypeError is thrown.
+    </p>
+    <script>
+      let sentence =
+        "I love cats. Cats are very easy to love. Cats are very popular.";
+      sentence = sentence.replaceAll("Cats", "Dogs");
+      sentence = sentence.replaceAll("cats", "dogs");
+
+      document.getElementById("ex_replaceall").innerHTML = sentence;
+    </script>
+
+    <h3>Example:</h3>
+    <p id="ex_replaceall_g"></p>
+    <script>
+      let Sentence =
+        "I love cats. Cats are very easy to love. Cats are very popular";
+      Sentence = Sentence.replaceAll(/Cats/g, "Dogs");
+      Sentence = Sentence.replaceAll(/cats/g, "dogs");
+
+      document.getElementById("ex_replaceall_g").innerHTML = Sentence;
+    </script>
+
+    <hr />
+
+    <!-- Converting a String to an Array -->
+    <h2>Converting a String to an Array</h2>
+    <p>
+      If you want to work with a string as an array, you can convert it to an
+      array.
+    </p>
+
+    <h2>JavaScript String split()</h2>
+    <p>
+      A string can be converted to an array with the
+      <code class="highlight_text">split()</code> method:
+    </p>
+
+    <p id="ex1_split"></p>
+
+    <script>
+      let ABCD = "a,b,c,d,e,f";
+      const myArray = ABCD.split(",");
+      document.getElementById("ex1_split").innerHTML = myArray[1];
+    </script>
+
+    <p>
+      If the separator is omitted, the returned array will contain the whole
+      string in index [0].
+    </p>
+    <p>
+      If the separator is "", the returned array will be an array of single
+      characters:
+    </p>
+
+    <p id="ex2_split"></p>
+
+    <script>
+      let str3 = "Hello";
+      const myArr = str3.split("");
+
+      str3 = "";
+      for (let i = 0; i < myArr.length; i++) {
+        str3 += myArr[i] + "<br>";
+      }
+      document.getElementById("ex2_split").innerHTML = str3;
+    </script>
+  </body>
 </html>
